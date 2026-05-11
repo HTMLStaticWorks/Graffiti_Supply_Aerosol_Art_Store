@@ -1,0 +1,100 @@
+/* Footer */
+.footer-custom {
+    background-color: #050505;
+    padding: 60px 0 30px;
+    border-top: 1px solid #222;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-heading {
+    color: var(--primary-neon);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    text-align: left; /* Exception for footer columns */
+}
+
+.footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+    transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+    color: var(--secondary-neon);
+    padding-left: 5px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    color: #FFFFFF !important; /* Force white color for visibility */
+    margin-right: 10px;
+    transition: var(--transition-smooth);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-neon);
+    color: #000;
+    transform: rotate(15deg);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Newsletter */
+.newsletter-form {
+    margin-top: 15px;
+}
+
+.newsletter-input {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: var(--transition-smooth);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 10px rgba(250, 255, 0, 0.2);
+}
+
+.newsletter-btn {
+    width: 100%;
+    background-color: var(--primary-neon);
+    color: #000;
+    border: none;
+    padding: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+.newsletter-btn:hover {
+    background-color: var(--secondary-neon);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(250, 255, 0, 0.3);
+}

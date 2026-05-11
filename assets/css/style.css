@@ -1,0 +1,281 @@
+/* --- Global Design System --- */
+:root {
+    --primary-neon: #FAFF00; /* Neon Yellow */
+    --secondary-neon: #FF003C; /* Neon Red */
+    --bg-dark: #0A0A0A;
+    --bg-card: #151515;
+    --text-main: #FFFFFF;
+    --text-muted: #A0A0A0;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --border-radius: 50px;
+    --text-white: #FFFFFF;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--text-main);
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-white-force {
+    color: var(--text-white) !important;
+}
+
+.text-neon-primary {
+    color: var(--primary-neon) !important;
+}
+
+.text-neon-secondary {
+    color: var(--secondary-neon) !important;
+}
+
+.text-light-force {
+    color: #f8f9fa !important;
+}
+
+/* Buttons */
+.btn, .btn-custom {
+    padding: 12px 28px;
+    border-radius: var(--border-radius) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    height: 50px; /* Consistent height */
+}
+
+.btn-primary-neon {
+    background-color: var(--primary-neon);
+    color: #000;
+}
+
+.btn-primary-neon:hover {
+    background-color: transparent;
+    color: var(--primary-neon);
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 15px var(--primary-neon);
+}
+
+.btn-secondary-neon {
+    background-color: var(--secondary-neon);
+    color: #fff;
+}
+
+.btn-secondary-neon:hover {
+    background-color: transparent;
+    color: var(--secondary-neon);
+    border-color: var(--secondary-neon);
+    box-shadow: 0 0 15px var(--secondary-neon);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-white);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary-neon);
+    color: var(--primary-neon);
+}
+
+/* Light Mode Hover Visibility Fixes */
+[data-theme="light"] .btn-primary-neon:hover {
+    background-color: #000;
+    color: var(--primary-neon);
+}
+
+[data-theme="light"] .btn-outline:hover {
+    background-color: var(--primary-neon);
+    color: #000;
+    border-color: var(--primary-neon);
+}
+
+[data-theme="light"] .btn-outline {
+    color: var(--bg-dark);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .btn-secondary-neon:hover {
+    background-color: #000;
+    color: var(--secondary-neon);
+}
+
+/* Section Spacing */
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Cards */
+.card-urban {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: 1px solid #333;
+    transition: var(--transition-smooth);
+    overflow: hidden;
+}
+
+.card-urban:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-neon);
+    box-shadow: 0 10px 30px rgba(250, 255, 0, 0.1);
+}
+
+/* Texture Overlays */
+.texture-bg {
+    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    background-attachment: fixed;
+}
+
+/* Glass & Neon Utilities */
+.bg-dark-glass {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.border-neon {
+    border: 1px solid var(--primary-neon) !important;
+    box-shadow: 0 0 15px rgba(250, 255, 0, 0.2);
+}
+
+.bg-primary-neon {
+    background-color: var(--primary-neon) !important;
+}
+
+/* Image Utilities */
+.img-height-sm {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.img-height-md {
+    height: 450px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--primary-neon);
+    padding: 30px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--primary-neon);
+}
+
+/* Brands */
+.brand-logo-box {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: var(--transition-smooth);
+    padding: 20px;
+}
+
+.brand-logo-box:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+    animation: fadeIn 0.8s forwards;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-neon);
+    color: #000;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(250, 255, 0, 0.4);
+}

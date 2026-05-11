@@ -1,0 +1,29 @@
+/* Dark Mode Theme */
+[data-theme="dark"] {
+    --bg-dark: #0A0A0A;
+    --bg-card: #151515;
+    --text-main: #FFFFFF;
+    --text-muted: #A0A0A0;
+}
+
+[data-theme="light"] {
+    --bg-dark: #F5F5F5;
+    --bg-card: #FFFFFF;
+    --text-main: #1A1A1A;
+    --text-muted: #666666;
+}
+
+/* Light mode overrides for urban look */
+[data-theme="light"] .navbar-custom {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .card-urban {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+[data-theme="light"] .footer-custom {
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+}

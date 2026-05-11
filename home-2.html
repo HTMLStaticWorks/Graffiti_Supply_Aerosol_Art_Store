@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 2 | Graffiti Supply & Aerosol Art Store</title>
+    <!-- Same CSS links -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/headers.css">
+    <link rel="stylesheet" href="assets/css/footers.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="texture-bg">
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
+                            <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="d-flex align-items-center ms-lg-3 gap-2">
+                            <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button><button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
+                            <a href="login.html" class="btn btn-sm btn-primary-neon">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home 2 Hero: Full Split Screen -->
+        <section class="container-fluid p-0 overflow-hidden">
+            <div class="row g-0" style="min-height: 90vh;">
+                <div class="col-lg-6 d-flex align-items-center justify-content-center p-5" style="background: var(--bg-dark); border-right: 2px solid var(--primary-neon);">
+                    <div class="text-center">
+                        <span class="badge bg-danger mb-3">NEW ARRIVALS</span>
+                        <h1 class="display-2 mb-4">THE CHROME<br><span style="color: var(--primary-neon);">EDITION</span></h1>
+                        <p class="mb-4">Limited run high-pressure chrome cans. Faster, brighter, bolder.</p>
+                        <a href="products.html" class="btn-custom btn-primary-neon">SHOP COLLECTION</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('assets/images/chrome-hero.png') center/cover no-repeat;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Showcase -->
+        <section class="section-padding bg-dark">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="category-card position-relative overflow-hidden rounded" style="height: 400px;">
+                            <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&q=80&w=800" class="w-100 h-100 object-fit-cover" alt="Caps">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                                <h3>FAT CAPS</h3>
+                                <a href="caps.html" class="text-white">Shop Now <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="category-card position-relative overflow-hidden rounded" style="height: 400px;">
+                            <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?auto=format&fit=crop&q=80&w=800" class="w-100 h-100 object-fit-cover" alt="Markers">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                                <h3>INK & MARKERS</h3>
+                                <a href="products.html" class="text-white">Shop Now <i class="fas fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3: Elite Gear Showcase -->
+        <section class="section-padding bg-dark">
+            <div class="container">
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-8">
+                        <h2 class="display-5 fw-bold">ELITE <span class="text-neon-primary">GEAR</span></h2>
+                        <p class="text-muted">Precision tools for high-stakes urban art.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <a href="products.html" class="btn btn-outline-light">VIEW ALL GEAR</a>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card-urban p-3 text-center h-100">
+                            <img src="assets/images/elite-gear.png" class="img-fluid rounded mb-3" alt="Pro Cans">
+                            <h4>PRO CANS</h4>
+                            <p class="small text-muted">High-pressure control.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-urban p-3 text-center h-100">
+                            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3" alt="Chrome markers">
+                            <h4>CHROME</h4>
+                            <p class="small text-muted">Mirror finish ink.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-urban p-3 text-center h-100">
+                            <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3" alt="Fat Caps">
+                            <h4>FAT CAPS</h4>
+                            <p class="small text-muted">Wide flare output.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-urban p-3 text-center h-100">
+                            <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3" alt="Sketchbooks">
+                            <h4>BLACKBOOKS</h4>
+                            <p class="small text-muted">Heavyweight paper.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The Artist's Toolset (Image on the Right) -->
+        <section class="section-padding bg-black overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="badge bg-primary-neon text-dark mb-3">PRO SERIES</span>
+                        <h2 class="display-4 fw-bold mb-4">THE ARTIST'S <br><span class="text-neon-secondary">TOOLSET</span></h2>
+                        <p class="lead text-light-force mb-4">Every writer knows that the tools define the technique. Our pro-series collection is curated by veterans of the scene, ensuring you have the pressure, the pigment, and the precision required for world-class murals.</p>
+                        <ul class="list-unstyled text-muted mb-5">
+                            <li class="mb-2"><i class="fas fa-check text-neon-primary me-2"></i> UV-Resistant Pigments</li>
+                            <li class="mb-2"><i class="fas fa-check text-neon-primary me-2"></i> Interchangeable Valve Systems</li>
+                            <li class="mb-2"><i class="fas fa-check text-neon-primary me-2"></i> Ergonomic Can Design</li>
+                        </ul>
+                        <a href="about.html" class="btn-custom btn-primary-neon">EXPLORE THE TECH</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img src="assets/images/pro-artist-setup.png" class="img-fluid rounded shadow-lg border-neon" alt="Pro Artist Setup">
+                            <div class="position-absolute top-0 end-0 p-3 bg-dark-glass m-3 rounded">
+                                <span class="fw-bold text-white">#STREETTECH</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Live Street Feed -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="text-center mb-5">LIVE <span class="text-neon-primary">STREET</span> FEED</h2>
+                <div class="row g-3">
+                    <div class="col-md-8">
+                        <img src="assets/images/mural-wall.png" class="img-fluid rounded w-100 h-100 object-fit-cover border-neon" alt="Main Mural">
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded border-neon" alt="Feed 1">
+                            </div>
+                            <div class="col-12">
+                                <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded border-neon" alt="Feed 2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="gallery.html" class="btn btn-sm btn-outline-light">VIEW MORE ON INSTAGRAM</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Learning the Craft -->
+        <section class="section-padding bg-card">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-7">
+                        <h2 class="display-5 fw-bold">LEARN THE <span class="text-neon-secondary">CRAFT</span></h2>
+                        <p class="text-muted">Master the techniques that separate the toys from the kings.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card-urban overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-sm-5">
+                                    <img src="assets/images/tutorial-hand.png" class="img-fluid h-100 object-fit-cover" alt="Technique">
+                                </div>
+                                <div class="col-sm-7 p-4">
+                                    <span class="text-neon-primary small fw-bold">WORKSHOP</span>
+                                    <h3>CAN CONTROL</h3>
+                                    <p class="small text-muted">Mastering pressure and distance for perfect fades.</p>
+                                    <a href="tutorials.html" class="btn btn-sm btn-primary-neon mt-2">ENROLL NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-urban overflow-hidden">
+                            <div class="row g-0">
+                                <div class="col-sm-5">
+                                    <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?auto=format&fit=crop&q=80&w=400" class="img-fluid h-100 object-fit-cover" alt="Technique">
+                                </div>
+                                <div class="col-sm-7 p-4">
+                                    <span class="text-neon-secondary small fw-bold">STUDIO</span>
+                                    <h3>LETTER FLOW</h3>
+                                    <p class="small text-muted">Understanding structural integrity and wildstyle flow.</p>
+                                    <a href="tutorials.html" class="btn btn-sm btn-primary-neon mt-2">ENROLL NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Join the Underground -->
+        <section class="section-padding bg-black">
+            <div class="container">
+                <div class="card-urban p-5 text-center" style="background: linear-gradient(45deg, rgba(57, 255, 20, 0.1), rgba(0, 0, 0, 0.9)); border: 1px solid var(--primary-neon);">
+                    <h2 class="display-4 fw-bold mb-3">JOIN THE <span class="text-neon-primary">UNDERGROUND</span></h2>
+                    <p class="lead mb-4">Get early access to drops, exclusive artist interviews, and 10% off your first order.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <form class="d-flex gap-2">
+                                <input type="email" class="form-control bg-dark text-white border-neon" placeholder="Enter your email" aria-label="Newsletter">
+                                <button type="submit" class="btn btn-primary-neon px-4">JOIN</button>
+                            </form>
+                        </div>
+                    </div>
+                    <p class="small text-muted mt-4">We respect your privacy. No spam, just pure street culture.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
+                    </div>
+                    <p class="text-muted">The ultimate hub for graffiti writers and street artists. Quality gear and urban culture.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5 class="footer-heading">SHOP</h5>
+                    <a href="products.html" class="footer-link">Spray Paint</a>
+                    <a href="caps.html" class="footer-link">Nozzles & Caps</a>
+                    <a href="products.html" class="footer-link">Markers</a>
+                </div>
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5 class="footer-heading">EXPLORE</h5>
+                    <a href="artists.html" class="footer-link">Artist Spotlight</a>
+                    <a href="gallery.html" class="footer-link">Wall Gallery</a>
+                    <a href="tutorials.html" class="footer-link">Learn Styles</a>
+                </div>
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5 class="footer-heading">SUPPORT</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="footer-heading">NEWSLETTER</h5>
+                    <p class="small text-muted">Get the latest drops and street tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Graffiti Supply & Aerosol Art Store. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

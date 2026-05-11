@@ -1,0 +1,160 @@
+Create a modern premium multipage website for a graffiti and aerosol art supply store named “Graffiti Supply & Aerosol Art Store”.
+Name and logo should be combinded as a single logo.svg.
+favicon.svg should be created from the logo.svg and should be used in the website.
+logo color should be visible in both dark and bright tehems if needed add baground to logoUse small and simple one word names and menus and also logo name too.
+Website Intent:
+An urban-style ecommerce-inspired showcase website focused on graffiti culture, spray paints, caps, markers, street artists, and wall art inspiration.
+
+Core Features:
+- Paint catalog showcase
+- Spray cap selection section
+- Marker & ink brands display
+- Blank wall gallery inspiration
+- Graffiti tutorial videos section
+- Featured street artists spotlight
+- Product-style category layouts
+- Contact and inquiry forms
+- No dashboard required
+
+Design Style:
+- Dark urban aesthetic
+- Neon accent highlights
+- Street-art inspired visuals
+- Modern typography
+- Creative but clean UI
+- Premium ecommerce-style layouts
+- Mobile-first responsive design
+
+Required Pagesstructure too
+/project-root *all html files will be here*
+- Home
+- Home 2
+- About
+- Products / Catalog
+- Cap Collection
+- Artist Spotlight
+- Gallery
+- Tutorials
+- Blog
+- Contact
+- 404
+- Coming Soon
+/assets
+   /css
+      style.css
+      dark-mode.css
+      rtl.css
+      headers.css
+      footers.css
+   /js
+      main.js
+   /images
+
+Same headers and footer for all pages.
+login signup pages needed without heders and footers.
+all pages headings and buttons should be center aligned. and design should be premium
+
+buttons shoud alwysa have hover effect and similar heights widths may vary some times
+Homepage Sections:
+- Hero banner with graffiti visuals
+- Featured paint collections
+- Popular spray caps
+- Marker brands showcase
+- Artist spotlight carousel
+- Tutorial video previews
+- Wall gallery showcase
+- Customer testimonials
+- CTA banner
+
+Design Requirements:
+- Use Bootstrap 5 CDN only
+- Use Vanilla JavaScript only
+- Dark mode support
+- RTL support
+- Sticky responsive navbar
+- Offcanvas mobile menu
+- SEO optimized structure
+- Fast loading
+- Beginner editable code
+- Consistent urban branding
+
+Color Palette:
+- Primary: Neon Yellow
+- Secondary: Neon Red
+- Accent: Black
+
+Typography:
+- Headings: Inter
+- Body: Inter
+
+Extra UI Elements:
+- Paint color swatches
+- Spray can hover animations
+- Urban textured backgrounds
+- Video preview cards
+- Graffiti-style CTA sections
+- Masonry gallery layout
+
+Performance & QA:
+- Fully responsive
+- No overlapping elements
+- No console errors
+- Optimized images
+- Accessible forms
+- WCAG compliant
+- Production-ready quality
+
+Rules
+HTML CSS WEBSITE
+MASTER RULES — NO BOILERPLATE VERSION
+
+1. Use Bootstrap 5 CDN ONLY
+2. Use Vanilla JavaScript ONLY
+3. Do NOT use jQuery
+4. Do NOT use Tailwind
+5. Do NOT use React
+6. Use semantic HTML5
+7. Mobile-first development required
+8. RTL support required
+9. Dark mode required
+10. Keep code beginner editable
+11. Use identical header/footer on all pages
+12. Use only one global design system
+13. Use only 3 global colors
+14. Use same typography everywhere
+15. Use same button styles everywhere
+16. No broken responsiveness
+17. No horizontal scrolling
+18. No overlapping elements
+19. No inconsistent spacing
+20. No duplicate layouts
+21. No generic boilerplate sections
+22. Every page must feel unique
+23. Keep animations clean and lightweight
+24. Use smooth transitions only
+25. Use proper spacing hierarchy
+26. Use proper heading hierarchy
+27. Add SEO meta tags on every page
+28. Add alt text for all images
+29. Use accessible forms and focus states
+30. Keep loading performance optimized
+31. All pages must be production-ready
+32. All buttons and navigation must work
+33. Keep folder structure strict
+34. No extra folders allowed
+35. Keep code clean and organized
+36. Use reusable components
+37. Dashboard branding must match frontend
+38. Use consistent shadows and border radius
+39. Optimize layouts for:
+   - Mobile
+   - Tablet
+   - Desktop
+40. Final output must be:
+   - Clean
+   - Premium
+   - Responsive
+   - SEO optimized
+   - Beginner friendly
+   - Hosting ready
+

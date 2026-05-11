@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graffiti Supply & Aerosol Art Store | Premium Street Art Gear</title>
+    <meta name="description" content="Premium graffiti and aerosol art supply store. High-quality spray paints, caps, markers, and street art inspiration.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/headers.css">
+    <link rel="stylesheet" href="assets/css/footers.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="texture-bg">
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
+                            <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="d-flex align-items-center ms-lg-3 gap-2">
+                            <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                            <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
+                            <a href="login.html" class="btn btn-sm btn-primary-neon">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section section-padding d-flex align-items-center" style="min-height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=2070') center/cover;">
+            <div class="container text-center">
+                <h1 class="display-1 mb-4 animate-fade" style="color: var(--primary-neon);">Spray The World</h1>
+                <p class="lead mb-5 animate-fade text-white-force" style="max-width: 700px; margin: 0 auto;">Premium aerosol art supplies for the street's finest. Shop the largest collection of professional spray paints and specialized caps.</p>
+                <div class="d-flex justify-content-center gap-3 animate-fade">
+                    <a href="products.html" class="btn-custom btn-primary-neon">Shop Paint</a>
+                    <a href="gallery.html" class="btn-custom btn-outline">View Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="mb-5">Elite Collections</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card-urban text-center p-4">
+                            <div class="icon-box mb-3"><i class="fas fa-spray-can fa-3x color-primary" style="color: var(--primary-neon);"></i></div>
+                            <h3>Premium Paint</h3>
+                            <p class="text-muted">High-pressure, matte finish, ultimate control.</p>
+                            <a href="products.html" class="btn-custom btn-outline w-100 mt-3">Browse Colors</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-urban text-center p-4">
+                            <div class="icon-box mb-3"><i class="fas fa-fill-drip fa-3x color-secondary" style="color: var(--secondary-neon);"></i></div>
+                            <h3>Specialty Caps</h3>
+                            <p class="text-muted">From ultra-skinny to fat-cap flares.</p>
+                            <a href="caps.html" class="btn-custom btn-outline w-100 mt-3">Select Tips</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-urban text-center p-4">
+                            <div class="icon-box mb-3"><i class="fas fa-marker fa-3x" style="color: #fff;"></i></div>
+                            <h3>Artist Markers</h3>
+                            <p class="text-muted">Ink that stays, markers that last.</p>
+                            <a href="products.html" class="btn-custom btn-outline w-100 mt-3">Shop Markers</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wall Inspiration Masonry -->
+        <section class="section-padding bg-card">
+            <div class="container">
+                <h2 class="mb-5">Wall Inspiration</h2>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=600" class="img-fluid rounded border-neon img-height-sm" alt="Wall Art 1">
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&q=80&w=600" class="img-fluid rounded border-neon img-height-sm" alt="Wall Art 2">
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?auto=format&fit=crop&q=80&w=600" class="img-fluid rounded border-neon img-height-sm" alt="Wall Art 3">
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="gallery.html" class="btn-custom btn-secondary-neon">Explore Full Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artist Spotlight -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="https://images.unsplash.com/photo-1501472312651-726afe119ff1?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded img-height-md" alt="Artist Spotlight">
+                    </div>
+                    <div class="col-lg-6 px-lg-5">
+                        <span class="text-uppercase fw-bold" style="color: var(--secondary-neon);">Artist of the Month</span>
+                        <h2 class="text-start mt-2">DASK ONE</h2>
+                        <p class="text-muted">Known for his intricate wildstyle and vibrant color palettes, Dask One has been pushing the boundaries of aerosol art for over a decade.</p>
+                        <a href="artists.html" class="btn-custom btn-primary-neon mt-3">Read Full Interview</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorials Spotlight -->
+        <section class="section-padding bg-card">
+            <div class="container">
+                <h2 class="mb-5">Learn The Styles</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card-urban overflow-hidden">
+                            <div class="ratio ratio-16x9 bg-dark d-flex align-items-center justify-content-center">
+                                <i class="fas fa-play-circle fa-3x color-primary" style="color: var(--primary-neon);"></i>
+                            </div>
+                            <div class="p-3">
+                                <h4 class="text-start">Letter Flow</h4>
+                                <p class="small text-muted">Mastering connections and balance.</p>
+                                <a href="tutorials.html" class="btn btn-sm btn-outline mt-2">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-urban overflow-hidden">
+                            <div class="ratio ratio-16x9 bg-dark d-flex align-items-center justify-content-center">
+                                <i class="fas fa-play-circle fa-3x color-secondary" style="color: var(--secondary-neon);"></i>
+                            </div>
+                            <div class="p-3">
+                                <h4 class="text-start">3D Effects</h4>
+                                <p class="small text-muted">Creating depth and shadow on flat walls.</p>
+                                <a href="tutorials.html" class="btn btn-sm btn-outline mt-2">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-urban overflow-hidden">
+                            <div class="ratio ratio-16x9 bg-dark d-flex align-items-center justify-content-center">
+                                <i class="fas fa-play-circle fa-3x" style="color: #fff;"></i>
+                            </div>
+                            <div class="p-3">
+                                <h4 class="text-start">Can Control</h4>
+                                <p class="small text-muted">Precision lines and smooth fades.</p>
+                                <a href="tutorials.html" class="btn btn-sm btn-outline mt-2">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Showcase -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="mb-5 text-center">The Gear We Trust</h2>
+                <div class="row align-items-center justify-content-center text-center">
+                    <div class="col-4 col-md-2 brand-logo-box">
+                        <h4 class="m-0">MONTANA</h4>
+                    </div>
+                    <div class="col-4 col-md-2 brand-logo-box">
+                        <h4 class="m-0">MOLOTOW</h4>
+                    </div>
+                    <div class="col-4 col-md-2 brand-logo-box">
+                        <h4 class="m-0">IRONLAK</h4>
+                    </div>
+                    <div class="col-4 col-md-2 brand-logo-box">
+                        <h4 class="m-0">MTN 94</h4>
+                    </div>
+                    <div class="col-4 col-md-2 brand-logo-box">
+                        <h4 class="m-0">FLAME</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-padding bg-card">
+            <div class="container">
+                <h2 class="mb-5">Voices Of The Street</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Best selection of caps I've found online. Shipping was lightning fast and the paint arrived in perfect condition."</p>
+                            <span class="testimonial-author">@GRAFF_KNG</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"The tutorials helped me finally master my flares. This site is more than a store, it's a resource."</p>
+                            <span class="testimonial-author">@SKETCH_ONE</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Quality gear for serious writers. The matte finish on the house brand is unmatched."</p>
+                            <span class="testimonial-author">@VANDAL_HEART</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding" style="background-color: var(--primary-neon);">
+            <div class="container text-center">
+                <h2 style="color: #000;">Ready to make your mark?</h2>
+                <p style="color: #000; font-weight: 700;">Join the community and get 10% off your first order.</p>
+                <a href="signup.html" class="btn-custom btn-secondary-neon mt-3">JOIN THE CREW</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
+                    </div>
+                    <p class="text-muted">The ultimate hub for graffiti writers and street artists. Quality gear and urban culture.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5 class="footer-heading">SHOP</h5>
+                    <a href="products.html" class="footer-link">Spray Paint</a>
+                    <a href="caps.html" class="footer-link">Nozzles & Caps</a>
+                    <a href="products.html" class="footer-link">Markers</a>
+                </div>
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5 class="footer-heading">EXPLORE</h5>
+                    <a href="artists.html" class="footer-link">Artist Spotlight</a>
+                    <a href="gallery.html" class="footer-link">Wall Gallery</a>
+                    <a href="tutorials.html" class="footer-link">Learn Styles</a>
+                </div>
+                <div class="col-lg-2 col-6 mb-4">
+                    <h5 class="footer-heading">SUPPORT</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="footer-heading">NEWSLETTER</h5>
+                    <p class="small text-muted">Get the latest drops and street tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Graffiti Supply & Aerosol Art Store. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
