@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,76 +15,65 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <style>
-        .paint-swatch {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-block;
-            border: 2px solid rgba(255,255,255,0.2);
-            cursor: pointer;
-            transition: var(--transition-smooth);
-        }
-        .paint-swatch:hover {
-            transform: scale(1.2);
-            border-color: #fff;
-        }
     </style>
 </head>
+
 <body class="texture-bg">
     <!-- Header -->
     <header>
-    <div class="container">
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Graffiti Supply Store">
-            </a>
-            
-            <ul class="nav-desktop">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="home-2.html">Home 2</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html" class="active">Shop</a></li>
-                <li><a href="artists.html">Artists</a></li>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="Graffiti Supply Store">
+                </a>
 
-                <li><a href="tutorials.html">Tutorials</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+                <ul class="nav-desktop">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html" class="active">Shop</a></li>
+                    <li><a href="artists.html">Artists</a></li>
 
-            <div class="header-actions">
-                <a href="login.html" class="btn btn-sm btn-primary-neon header-login-btn">Login</a>
-                <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
-                <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="header-actions">
+                    <a href="login.html" class="btn btn-sm btn-primary-neon header-login-btn">Login</a>
+                    <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i
+                            class="fas fa-moon"></i></button>
+                    <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-</header>
+            </nav>
+        </div>
+    </header>
 
-<div class="mobile-offcanvas">
-    <div class="offcanvas-header">
-        <span class="close-menu" style="cursor:pointer; font-size: 2rem;">&times;</span>
-    </div>
-    <ul class="mobile-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="home-2.html">Home 2</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html" class="active">Shop</a></li>
-        <li><a href="artists.html">Artists</a></li>
+    <div class="mobile-offcanvas">
+        <div class="offcanvas-header">
+            <span class="close-menu" style="cursor:pointer; font-size: 2rem;">&times;</span>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html" class="active">Shop</a></li>
+            <li><a href="artists.html">Artists</a></li>
 
-        <li><a href="tutorials.html">Tutorials</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="auth-btn-container">
-        <a href="login.html" class="btn btn-sm btn-primary-neon w-100">Login</a>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-btn-container">
+            <a href="login.html" class="btn btn-sm btn-primary-neon w-100">Login</a>
+        </div>
     </div>
-</div>
-<div class="mobile-offcanvas-overlay"></div>
+    <div class="mobile-offcanvas-overlay"></div>
 
 
 
@@ -94,8 +84,9 @@
                 <div class="row mb-5 justify-content-center">
                     <div class="col-md-6">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Search brands or colors...">
-                            <button class="btn btn-primary-neon"><i class="fas fa-search"></i></button>
+                            <input type="text" class="form-control-urban w-75 border-secondary"
+                                placeholder="Search brands or colors...">
+                            <button class="btn btn-primary-neon" style="margin-left: 18px !important;"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div>
@@ -103,128 +94,158 @@
                 <div class="row g-4">
                     <!-- Product 1 -->
                     <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card-urban p-3">
-                            <img src="assets/images/chrome-hero.png" class="img-fluid rounded mb-3 img-height-sm object-fit-cover" alt="Ultra Chrome">
-                            <h4 class="text-start">ULTRA CHROME</h4>
-                            <p class="small text-muted">High Pressure / 600ml</p>
-                            <div class="d-flex gap-2 mb-3">
-                                <span class="paint-swatch" style="background-color: #C0C0C0;" title="Silver"></span>
-                                <span class="paint-swatch" style="background-color: #FFD700;" title="Gold"></span>
-                                <span class="paint-swatch" style="background-color: #B87333;" title="Copper"></span>
+                        <div class="card-urban">
+                            <img src="assets/images/chrome-hero.png"
+                                class="img-fluid img-height-sm" alt="Ultra Chrome">
+                            <div class="card-content pt-3">
+                                <h4 class="text-start">ULTRA CHROME</h4>
+                                <p class="small text-muted">High Pressure / 600ml</p>
+                                <div class="swatch-container">
+                                    <span class="paint-swatch" style="background-color: #C0C0C0;" title="Silver"></span>
+                                    <span class="paint-swatch" style="background-color: #FFD700;" title="Gold"></span>
+                                    <span class="paint-swatch" style="background-color: #B87333;" title="Copper"></span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center btn-push-bottom">
-                                <span class="fw-bold">$9.50</span>
+                            <div class="product-card-footer">
+                                <span class="product-price">$9.50</span>
                                 <button class="btn btn-sm btn-primary-neon">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
                     <!-- Product 2 -->
                     <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card-urban p-3">
-                            <img src="assets/images/tutorial-control.png" class="img-fluid rounded mb-3 img-height-sm object-fit-cover" alt="Neon Blast">
-                            <h4 class="text-start">NEON BLAST</h4>
-                            <p class="small text-muted">Low Pressure / 400ml</p>
-                            <div class="d-flex gap-2 mb-3">
-                                <span class="paint-swatch" style="background-color: #FF3131;" title="Bright Red"></span>
-                                <span class="paint-swatch" style="background-color: #FF003C;" title="Neon Red"></span>
-                                <span class="paint-swatch" style="background-color: #39FF14;" title="Neon Green"></span>
+                        <div class="card-urban">
+                            <img src="assets/images/tutorial-control.png"
+                                class="img-fluid img-height-sm" alt="Neon Blast">
+                            <div class="card-content pt-3">
+                                <h4 class="text-start">NEON BLAST</h4>
+                                <p class="small text-muted">Low Pressure / 400ml</p>
+                                <div class="swatch-container">
+                                    <span class="paint-swatch" style="background-color: #FF3131;" title="Bright Red"></span>
+                                    <span class="paint-swatch" style="background-color: #FF003C;" title="Neon Red"></span>
+                                    <span class="paint-swatch" style="background-color: #39FF14;" title="Neon Green"></span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center btn-push-bottom">
-                                <span class="fw-bold">$7.25</span>
+                            <div class="product-card-footer">
+                                <span class="product-price">$7.25</span>
                                 <button class="btn btn-sm btn-primary-neon">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
                     <!-- More products... -->
                     <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card-urban p-3">
-                            <img src="assets/images/wall-3.png" class="img-fluid rounded mb-3 img-height-sm object-fit-cover" alt="Matte Master">
-                            <h4 class="text-start">MATTE MASTER</h4>
-                            <p class="small text-muted">Acrylic Based / 400ml</p>
-                            <div class="d-flex gap-2 mb-3">
-                                <span class="paint-swatch" style="background-color: #000000;" title="Black"></span>
-                                <span class="paint-swatch" style="background-color: #FFFFFF;" title="White"></span>
-                                <span class="paint-swatch" style="background-color: #4B0082;" title="Indigo"></span>
+                        <div class="card-urban">
+                            <img src="assets/images/wall-3.png"
+                                class="img-fluid img-height-sm" alt="Matte Master">
+                            <div class="card-content pt-3">
+                                <h4 class="text-start">MATTE MASTER</h4>
+                                <p class="small text-muted">Acrylic Based / 400ml</p>
+                                <div class="swatch-container">
+                                    <span class="paint-swatch" style="background-color: #000000;" title="Black"></span>
+                                    <span class="paint-swatch" style="background-color: #FFFFFF;" title="White"></span>
+                                    <span class="paint-swatch" style="background-color: #4B0082;" title="Indigo"></span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center btn-push-bottom">
-                                <span class="fw-bold">$6.95</span>
+                            <div class="product-card-footer">
+                                <span class="product-price">$6.95</span>
                                 <button class="btn btn-sm btn-primary-neon">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card-urban p-3">
-                            <img src="assets/images/wall-2.png" class="img-fluid rounded mb-3 img-height-sm object-fit-cover" alt="Trans-Lux">
-                            <h4 class="text-start">TRANS-LUX</h4>
-                            <p class="small text-muted">Transparent / 400ml</p>
-                            <div class="d-flex gap-2 mb-3">
-                                <span class="paint-swatch" style="background-color: rgba(0,0,255,0.5);" title="Blue"></span>
-                                <span class="paint-swatch" style="background-color: rgba(255,0,0,0.5);" title="Red"></span>
-                                <span class="paint-swatch" style="background-color: rgba(0,128,0,0.5);" title="Green"></span>
+                        <div class="card-urban">
+                            <img src="assets/images/wall-2.png"
+                                class="img-fluid img-height-sm" alt="Trans-Lux">
+                            <div class="card-content pt-3">
+                                <h4 class="text-start">TRANS-LUX</h4>
+                                <p class="small text-muted">Transparent / 400ml</p>
+                                <div class="swatch-container">
+                                    <span class="paint-swatch" style="background-color: rgba(0,0,255,0.5);"
+                                        title="Blue"></span>
+                                    <span class="paint-swatch" style="background-color: rgba(255,0,0,0.5);"
+                                        title="Red"></span>
+                                    <span class="paint-swatch" style="background-color: rgba(0,128,0,0.5);"
+                                        title="Green"></span>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center btn-push-bottom">
-                                <span class="fw-bold">$8.50</span>
+                            <div class="product-card-footer">
+                                <span class="product-price">$8.50</span>
                                 <button class="btn btn-sm btn-primary-neon">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
                     <!-- Product 5 -->
                     <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card-urban p-3 h-100">
-                            <img src="assets/images/markers-cat.png" class="img-fluid rounded mb-3 img-height-sm object-fit-cover" alt="Pro Mop Marker">
-                            <h4 class="text-start">PRO MOP MARKER</h4>
-                            <p class="small text-muted">Drip Master / 15mm Tip</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto btn-push-bottom">
-                                <span class="fw-bold">$12.99</span>
-                                <button class="btn btn-sm btn-primary-neon">ADD</button>
+                        <div class="card-urban h-100">
+                            <img src="assets/images/markers-cat.png"
+                                class="img-fluid img-height-sm" alt="Pro Mop Marker">
+                            <div class="card-content pt-3">
+                                <h4 class="text-start">PRO MOP MARKER</h4>
+                                <p class="small text-muted">Drip Master / 15mm Tip</p>
+                            </div>
+                            <div class="product-card-footer">
+                                <span class="product-price">$12.99</span>
+                                <button class="btn btn-sm btn-primary-neon px-4">ADD</button>
                             </div>
                         </div>
                     </div>
                     <!-- Product 6 -->
                     <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card-urban p-3 h-100">
-                            <img src="assets/images/caps-cat.png" class="img-fluid rounded mb-3 img-height-sm object-fit-cover" alt="Fat Cap Bundle">
-                            <h4 class="text-start">FAT CAP BUNDLE</h4>
-                            <p class="small text-muted">25 Pack / Assorted</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto btn-push-bottom">
-                                <span class="fw-bold">$15.50</span>
-                                <button class="btn btn-sm btn-primary-neon">ADD</button>
+                        <div class="card-urban h-100">
+                            <img src="assets/images/caps-cat.png"
+                                class="img-fluid img-height-sm" alt="Fat Cap Bundle">
+                            <div class="card-content pt-3">
+                                <h4 class="text-start">FAT CAP BUNDLE</h4>
+                                <p class="small text-muted">25 Pack / Assorted</p>
+                            </div>
+                            <div class="product-card-footer">
+                                <span class="product-price">$15.50</span>
+                                <button class="btn btn-sm btn-primary-neon px-4">ADD</button>
                             </div>
                         </div>
                     </div>
                     <!-- Product 7 -->
                     <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card-urban p-3 h-100">
-                            <img src="assets/images/tutorial-letters.png" class="img-fluid rounded mb-3 img-height-sm object-fit-cover" alt="Urban Sketchbook">
-                            <h4 class="text-start">URBAN SKETCHBOOK</h4>
-                            <p class="small text-muted">A4 / 200 Pages / Heavy</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto btn-push-bottom">
-                                <span class="fw-bold">$22.00</span>
-                                <button class="btn btn-sm btn-primary-neon">ADD</button>
+                        <div class="card-urban h-100">
+                            <img src="assets/images/tutorial-letters.png"
+                                class="img-fluid img-height-sm" alt="Urban Sketchbook">
+                            <div class="card-content pt-3">
+                                <h4 class="text-start">URBAN SKETCHBOOK</h4>
+                                <p class="small text-muted">A4 / 200 Pages / Heavy</p>
+                            </div>
+                            <div class="product-card-footer">
+                                <span class="product-price">$22.00</span>
+                                <button class="btn btn-sm btn-primary-neon px-4">ADD</button>
                             </div>
                         </div>
                     </div>
                     <!-- Product 8 -->
                     <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card-urban p-3 h-100">
-                            <img src="https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg?auto=compress&cs=tinysrgb&w=400" class="img-fluid rounded mb-3 img-height-sm object-fit-cover" alt="Vented Respirator">
-                            <h4 class="text-start">VENTED RESPIRATOR</h4>
-                            <p class="small text-muted">Dual Filter / Pro Grade</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto btn-push-bottom">
-                                <span class="fw-bold">$45.00</span>
-                                <button class="btn btn-sm btn-primary-neon">ADD</button>
+                        <div class="card-urban h-100">
+                            <img src="https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                class="img-fluid img-height-sm" alt="Vented Respirator">
+                            <div class="card-content pt-3">
+                                <h4 class="text-start">VENTED RESPIRATOR</h4>
+                                <p class="small text-muted">Dual Filter / Pro Grade</p>
+                            </div>
+                            <div class="product-card-footer">
+                                <span class="product-price">$45.00</span>
+                                <button class="btn btn-sm btn-primary-neon px-4">ADD</button>
                             </div>
                         </div>
                     </div>
                     <!-- Product 9 -->
                     <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card-urban p-3 h-100">
-                            <img src="assets/images/wall-1.png" class="img-fluid rounded mb-3 img-height-sm object-fit-cover" alt="NY Fat Caps">
-                            <h4 class="text-start">NY FAT CAPS</h4>
-                            <p class="small text-muted">50 Pack / Classic Blue</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto btn-push-bottom">
-                                <span class="fw-bold">$18.99</span>
-                                <button class="btn btn-sm btn-primary-neon">ADD</button>
+                        <div class="card-urban h-100">
+                            <img src="assets/images/wall-1.png"
+                                class="img-fluid img-height-sm" alt="NY Fat Caps">
+                            <div class="card-content pt-3">
+                                <h4 class="text-start">NY FAT CAPS</h4>
+                                <p class="small text-muted">50 Pack / Classic Blue</p>
+                            </div>
+                            <div class="product-card-footer">
+                                <span class="product-price">$18.99</span>
+                                <button class="btn btn-sm btn-primary-neon px-4">ADD</button>
                             </div>
                         </div>
                     </div>
@@ -241,39 +262,54 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-6">
-                        <div class="card-urban p-4 border-neon h-100">
-                            <div class="row align-items-center">
+                        <div class="card-urban p-0 border-neon h-100 overflow-hidden">
+                            <div class="row g-0 h-100">
                                 <div class="col-md-5">
-                                    <img src="assets/images/chrome-hero.png" class="img-fluid rounded" alt="Starter Bundle">
+                                    <img src="assets/images/chrome-hero.png" class="img-fluid h-100 object-fit-cover"
+                                        alt="Starter Bundle">
                                 </div>
                                 <div class="col-md-7">
-                                    <span class="badge bg-primary-neon text-dark mb-2">MOST POPULAR</span>
-                                    <h4>THE STARTER KIT</h4>
-                                    <p class="small text-muted">12 Cans + 25 Mixed Caps + Pro Marker. Everything you need to hit your first wall.</p>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <h3 class="mb-0">$89.00</h3>
-                                        <del class="text-muted">$110.00</del>
+                                    <div class="bundle-card-body p-4">
+                                        <div class="mb-auto">
+                                            <span class="badge bg-primary-neon text-dark mb-2">MOST POPULAR</span>
+                                            <h4 class="text-start">THE STARTER KIT</h4>
+                                            <p class="small text-muted mb-4">12 Cans + 25 Mixed Caps + Pro Marker. Everything you
+                                                need to hit your first wall.</p>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mt-auto">
+                                            <div class="d-flex align-items-baseline gap-2">
+                                                <h3 class="mb-0 text-neon-primary">$89.00</h3>
+                                                <del class="small text-muted">$110.00</del>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary-neon">BUY BUNDLE</button>
+                                        </div>
                                     </div>
-                                    <button class="btn btn-primary-neon mt-3">BUY BUNDLE</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="card-urban p-4 border-neon h-100">
-                            <div class="row align-items-center">
+                        <div class="card-urban p-0 border-neon h-100 overflow-hidden">
+                            <div class="row g-0 h-100">
                                 <div class="col-md-5">
-                                    <img src="assets/images/wall-1.png" class="img-fluid rounded" alt="Pro Bundle">
+                                    <img src="assets/images/wall-1.png" class="img-fluid h-100 object-fit-cover" alt="Pro Bundle">
                                 </div>
                                 <div class="col-md-7">
-                                    <span class="badge bg-secondary-neon text-dark mb-2">PROFESSIONAL</span>
-                                    <h4>THE MURALIST PACK</h4>
-                                    <p class="small text-muted">24 Cans + 50 Caps + Respirator + Gloves. Built for large scale productions.</p>
-                                    <div class="d-flex align-items-center gap-3">
-                                        <h3 class="mb-0">$199.00</h3>
-                                        <del class="text-muted">$245.00</del>
+                                    <div class="bundle-card-body p-4">
+                                        <div class="mb-auto">
+                                            <span class="badge bg-secondary-neon text-white mb-2">PROFESSIONAL</span>
+                                            <h4 class="text-start">THE MURALIST PACK</h4>
+                                            <p class="small text-muted mb-4">24 Cans + 50 Caps + Respirator + Gloves. Built for large
+                                                scale productions.</p>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mt-auto">
+                                            <div class="d-flex align-items-baseline gap-2">
+                                                <h3 class="mb-0 text-neon-secondary">$199.00</h3>
+                                                <del class="small text-muted">$245.00</del>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary-neon">BUY BUNDLE</button>
+                                        </div>
                                     </div>
-                                    <button class="btn btn-primary-neon mt-3">BUY BUNDLE</button>
                                 </div>
                             </div>
                         </div>
@@ -291,7 +327,8 @@
                     <div class="footer-logo">
                         <img src="assets/images/logo.png" alt="Graffiti Supply Store">
                     </div>
-                    <p class="text-muted">The ultimate hub for graffiti writers and street artists. Quality gear and urban culture.</p>
+                    <p class="text-muted">The ultimate hub for graffiti writers and street artists. Quality gear and
+                        urban culture.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-tiktok"></i></a>
@@ -322,7 +359,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Graffiti Supply & Aerosol Art Store. All Rights Reserved.</p>
+                <p>&copy; 2026 Graffiti Supply & Aerosol Art Store. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -330,9 +367,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
-
-
-
-
-
