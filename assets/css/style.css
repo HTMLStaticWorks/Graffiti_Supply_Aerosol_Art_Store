@@ -139,6 +139,8 @@ p {
 .btn-outline:hover {
     border-color: var(--primary-neon);
     color: var(--primary-neon);
+    box-shadow: 0 0 15px rgba(255, 49, 49, 0.3);
+    background-color: rgba(255, 49, 49, 0.05);
 }
 
 /* Light Mode Hover Visibility Fixes */
@@ -271,6 +273,16 @@ p {
     flex-direction: row !important;
     gap: 8px;
     margin-bottom: 15px;
+}
+
+[data-theme="light"] .paint-swatch {
+    border: 1px solid #ddd;
+}
+
+[data-theme="light"] .paint-swatch[style*="background-color: #FFFFFF"],
+[data-theme="light"] .paint-swatch[style*="background-color: #ffffff"],
+[data-theme="light"] .paint-swatch[style*="background-color: white"] {
+    border: 1px solid #999;
 }
 
 .card-urban:hover {
@@ -612,6 +624,25 @@ p {
 [data-theme="light"] .form-control-urban:focus {
     background: #ffffff !important;
     border-color: var(--primary-neon) !important;
+}
+
+.form-control-urban::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="light"] .form-control-urban::placeholder {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Fix input-group rounding for urban controls */
+.input-group > .form-control-urban {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.input-group > .btn:last-child {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
 
 .contact-hero .form-label {

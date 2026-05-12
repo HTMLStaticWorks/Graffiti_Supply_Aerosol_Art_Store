@@ -270,7 +270,7 @@ nav {
     }
 
     .btn-icon,
-    .btn-outline {
+    .header-actions .btn-outline {
         width: 32px !important;
         height: 32px !important;
         font-size: 0.65rem !important;
