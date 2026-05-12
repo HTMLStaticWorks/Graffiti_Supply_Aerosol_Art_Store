@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Graffiti Supply & Aerosol Art Store</title>
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -13,192 +14,330 @@
     <link rel="stylesheet" href="assets/css/footers.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        /* Internal Page-Specific Styles for premium magazine feel */
+        .blog-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 5rem;
+        }
+
+        .blog-hero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.4);
+            transform: scale(1.05);
+            /* Slight scale for potential parallax or just better framing */
+        }
+
+        .blog-hero-content {
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 4.5rem 4rem;
+            border-left: 10px solid var(--primary-neon);
+            max-width: 850px;
+            border-radius: 0 40px 40px 0;
+            box-shadow: 40px 0 80px rgba(0, 0, 0, 0.7);
+            color: #ffffff !important;
+        }
+
+        .blog-hero-content h1 {
+            color: #ffffff !important;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            font-weight: 900;
+        }
+
+        .blog-hero-content .lead {
+            color: rgba(255, 255, 255, 0.95) !important;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-magazine-card {
+            background: transparent;
+            border: none;
+            margin-bottom: 2.5rem;
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-magazine-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .blog-magazine-img-wrapper {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .blog-magazine-img-wrapper img {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .blog-magazine-card:hover .blog-magazine-img-wrapper img {
+            transform: scale(1.1);
+            filter: brightness(1.1);
+        }
+
+        .sidebar-magazine {
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar-widget {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+            border-radius: 30px;
+            margin-bottom: 2.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .category-pill {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 50px;
+            background: rgba(255, 49, 49, 0.15);
+            color: var(--primary-neon);
+            font-size: 0.75rem;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: 1px solid rgba(255, 49, 49, 0.2);
+            transition: var(--transition-smooth);
+        }
+
+        .category-pill:hover {
+            background: var(--primary-neon);
+            color: #000;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            line-height: 1.1;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            transition: var(--transition-smooth);
+        }
+
+        .blog-magazine-card:hover .article-title {
+            color: var(--primary-neon);
+        }
+
+        .read-more-link {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition-smooth);
+        }
+
+        .read-more-link:hover {
+            gap: 15px;
+            color: var(--primary-neon) !important;
+        }
+
+        .blog-magazine-card .read-more-link {
+            margin-top: 1rem !important;
+            /* Reduce gap height */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
+
 <body class="texture-bg">
     <!-- Header -->
     <header>
-    <div class="container">
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
-            </a>
-            
-            <ul class="nav-desktop">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="home-2.html">Home 2</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Shop</a></li>
-                <li><a href="artists.html">Artists</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="tutorials.html">Tutorials</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-            <div class="header-actions">
-                <a href="login.html" class="btn btn-sm btn-primary-neon header-login-btn">Login</a>
-                <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
-                <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="Graffiti Supply Store">
+                </a>
+                <ul class="nav-desktop">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="artists.html">Artists</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <a href="login.html" class="btn btn-sm btn-primary-neon header-login-btn">Login</a>
+                    <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i
+                            class="fas fa-moon"></i></button>
+                    <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
+                    <div class="hamburger"><span></span><span></span><span></span></div>
                 </div>
-            </div>
-        </nav>
-    </div>
-</header>
+            </nav>
+        </div>
+    </header>
 
-<div class="mobile-offcanvas">
-    <div class="offcanvas-header">
-        <span class="close-menu" style="cursor:pointer; font-size: 2rem;">&times;</span>
+    <div class="mobile-offcanvas">
+        <div class="offcanvas-header"><span class="close-menu" style="cursor:pointer; font-size: 2rem;">&times;</span>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="artists.html">Artists</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="auth-btn-container"><a href="login.html" class="btn btn-sm btn-primary-neon w-100">Login</a></div>
     </div>
-    <ul class="mobile-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="home-2.html">Home 2</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Shop</a></li>
-        <li><a href="artists.html">Artists</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="tutorials.html">Tutorials</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="auth-btn-container">
-        <a href="login.html" class="btn btn-sm btn-primary-neon w-100">Login</a>
-    </div>
-</div>
-<div class="mobile-offcanvas-overlay"></div>
-
-
+    <div class="mobile-offcanvas-overlay"></div>
 
     <main>
-        <section class="section-padding bg-dark">
+        <!-- Featured Post Hero -->
+        <section class="blog-hero">
+            <img src="assets/images/wall-1.png" class="blog-hero-img" alt="Featured Post">
             <div class="container">
-                <h1 class="mb-5">URBAN ART BLOG</h1>
-                
-                <div class="row g-4">
-                    <!-- Post 1 -->
+                <div class="blog-hero-content animate-fade">
+                    <span class="category-pill">Featured Story</span>
+                    <h1 class="text-start display-3 mb-3">SUBWAY ART EVOLUTION</h1>
+                    <p class="lead mb-4">Explore how the NYC subway became the world's largest moving art gallery.</p>
+                    <a href="#" class="btn btn-primary-neon">READ MORE</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-5">
+            <div class="container">
+                <div class="row g-5">
+                    <!-- Blog Posts Grid -->
                     <div class="col-lg-8">
-                        <div class="card-urban mb-4 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=1200" class="img-fluid" alt="Blog 1">
-                            <div class="p-4">
-                                <span class="badge bg-danger mb-2">CULTURE</span>
-                                <h2 class="text-start">The Evolution of New York Subway Art</h2>
-                                <p class="text-muted">From the early 70s to the modern era, explore how the subway became the world's largest moving art gallery.</p>
-                                <a href="#" class="btn-custom btn-primary-neon">Read More</a>
+                        <div class="row g-4">
+                            <!-- Article 1 -->
+                            <div class="col-md-6">
+                                <div class="blog-magazine-card">
+                                    <div class="blog-magazine-img-wrapper ratio ratio-4x3">
+                                        <img src="assets/images/markers-cat.png" alt="Markers Guide">
+                                    </div>
+                                    <span class="category-pill"
+                                        style="background: rgba(255, 193, 7, 0.15); color: #ffc107; border-color: rgba(255, 193, 7, 0.2);">TECHNIQUE</span>
+                                    <h4 class="text-start article-title">Essential Markers</h4>
+                                    <p class="text-muted small">A guide to the best markers for blackbooks and street
+                                        tags.</p>
+                                    <a href="#"
+                                        class="text-neon-primary text-decoration-none read-more-link fw-bold">READ MORE
+                                        <i class="fas fa-arrow-right"></i></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-urban mb-4 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1525904097878-94fb15835963?auto=format&fit=crop&q=80&w=1200" class="img-fluid" alt="Blog 2">
-                            <div class="p-4">
-                                <span class="badge bg-warning text-dark mb-2">TECHNIQUE</span>
-                                <h2 class="text-start">Choosing Your First Set of Markers</h2>
-                                <p class="text-muted">A beginner's guide to mop markers, chisel tips, and paint pens for blackbooks and beyond.</p>
-                                <a href="#" class="btn-custom btn-primary-neon">Read More</a>
+                            <!-- Article 2 -->
+                            <div class="col-md-6">
+                                <div class="blog-magazine-card">
+                                    <div class="blog-magazine-img-wrapper ratio ratio-4x3">
+                                        <img src="assets/images/caps-cat.png" alt="Caps Guide">
+                                    </div>
+                                    <span class="category-pill">GEAR REVIEW</span>
+                                    <h4 class="text-start article-title">The Must-Have Cans</h4>
+                                    <p class="text-muted small">The top 5 high-pressure silvers and essential caps for
+                                        every writer.</p>
+                                    <a href="#"
+                                        class="text-neon-primary text-decoration-none read-more-link fw-bold">READ MORE
+                                        <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <!-- Article 3 -->
+                            <div class="col-md-6">
+                                <div class="blog-magazine-card">
+                                    <div class="blog-magazine-img-wrapper ratio ratio-4x3">
+                                        <img src="assets/images/wall-2.png" alt="Digital Graffiti">
+                                    </div>
+                                    <span class="category-pill"
+                                        style="background: rgba(13, 202, 240, 0.15); color: #0dcaf0; border-color: rgba(13, 202, 240, 0.2);">FUTURE</span>
+                                    <h4 class="text-start article-title">Digital Graffiti</h4>
+                                    <p class="text-muted small">Is VR the new frontier? The intersection of tech and
+                                        street culture.</p>
+                                    <a href="#"
+                                        class="text-neon-primary text-decoration-none read-more-link fw-bold">READ MORE
+                                        <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <!-- Article 4 -->
+                            <div class="col-md-6">
+                                <div class="blog-magazine-card">
+                                    <div class="blog-magazine-img-wrapper ratio ratio-4x3">
+                                        <img src="assets/images/wall-3.png" alt="Legal Walls">
+                                    </div>
+                                    <span class="category-pill"
+                                        style="background: rgba(25, 135, 84, 0.15); color: #198754; border-color: rgba(25, 135, 84, 0.2);">COMMUNITY</span>
+                                    <h4 class="text-start article-title">Mural Laws</h4>
+                                    <p class="text-muted small">What you need to know about legal walls and permits in
+                                        2024.</p>
+                                    <a href="#"
+                                        class="text-neon-primary text-decoration-none read-more-link fw-bold">READ MORE
+                                        <i class="fas fa-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <!-- Sidebar -->
                     <div class="col-lg-4">
-                        <div class="card-urban p-4 mb-4">
-                            <h4>CATEGORIES</h4>
-                            <ul class="list-unstyled mt-3">
-                                <li><a href="#" class="footer-link">Culture (12)</a></li>
-                                <li><a href="#" class="footer-link">Tutorials (8)</a></li>
-                                <li><a href="#" class="footer-link">Reviews (5)</a></li>
-                                <li><a href="#" class="footer-link">Interviews (15)</a></li>
-                            </ul>
-                        </div>
-                        <div class="card-urban p-4">
-                            <h4>NEWSLETTER</h4>
-                            <p class="small text-muted mt-3">Get the latest urban art news delivered to your inbox.</p>
-                            <input type="email" class="form-control bg-dark border-secondary text-white mb-3" placeholder="Enter email">
-                            <button class="btn btn-primary-neon w-100">SUBSCRIBE</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Trending Now -->
-        <section class="section-padding bg-card">
-            <div class="container">
-                <h2 class="mb-5">TRENDING NOW</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card-urban p-3 h-100">
-                            <div class="ratio ratio-16x9 mb-3">
-                                <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded" alt="Trend 1">
+                        <aside class="sidebar-magazine">
+                            <div class="sidebar-widget">
+                                <h5 class="text-start mb-4">CATEGORIES</h5>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="#" class="category-pill text-decoration-none">Culture</a>
+                                    <a href="#" class="category-pill text-decoration-none"
+                                        style="background: rgba(255, 193, 7, 0.15); color: #ffc107; border-color: rgba(255, 193, 7, 0.2);">Technique</a>
+                                    <a href="#" class="category-pill text-decoration-none"
+                                        style="background: rgba(13, 202, 240, 0.15); color: #0dcaf0; border-color: rgba(13, 202, 240, 0.2);">Future</a>
+                                    <a href="#" class="category-pill text-decoration-none"
+                                        style="background: rgba(25, 135, 84, 0.15); color: #198754; border-color: rgba(25, 135, 84, 0.2);">Community</a>
+                                    <a href="#" class="category-pill text-decoration-none"
+                                        style="background: rgba(111, 66, 193, 0.15); color: #6f42c1; border-color: rgba(111, 66, 193, 0.2);">Reviews</a>
+                                </div>
                             </div>
-                            <h5>5 Cans You Need in Your Bag</h5>
-                            <p class="small text-muted">The ultimate rundown of high-pressure silvers.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card-urban p-3 h-100">
-                            <div class="ratio ratio-16x9 mb-3">
-                                <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded" alt="Trend 2">
-                            </div>
-                            <h5>The Rise of Digital Graffiti</h5>
-                            <p class="small text-muted">Is VR the next frontier for writers?</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card-urban p-3 h-100">
-                            <div class="ratio ratio-16x9 mb-3">
-                                <img src="https://images.unsplash.com/photo-1501472312651-726afe119ff1?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded" alt="Trend 3">
-                            </div>
-                            <h5>Mural Laws in 2024</h5>
-                            <p class="small text-muted">Everything you need to know about legal walls.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Author Spotlight -->
-        <section class="section-padding">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="display-5">OUR VOICES</h2>
-                    <p class="text-muted">Meet the writers and photographers behind our stories.</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-3 text-center">
-                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200" class="img-fluid rounded-circle border-neon p-1 mb-3" style="width: 120px;" alt="Author 1">
-                        <h4>SLICK VIC</h4>
-                        <p class="small text-muted">Technical Specialist</p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" class="img-fluid rounded-circle border-neon p-1 mb-3" style="width: 120px;" alt="Author 2">
-                        <h4>PIXEL PEN</h4>
-                        <p class="small text-muted">Culture Critic</p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200" class="img-fluid rounded-circle border-neon p-1 mb-3" style="width: 120px;" alt="Author 3">
-                        <h4>MURAL MAMA</h4>
-                        <p class="small text-muted">Community Lead</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <div class="sidebar-widget">
+                                <h5 class="text-start mb-3">GRAFF-CAST</h5>
+                                <div class="ratio ratio-16x9 mb-3 rounded-4 overflow-hidden shadow-sm"
+                                    style="background: #000;">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <i class="fas fa-microphone-alt fa-3x" style="color: var(--primary-neon);"></i>
+                                    </div>
+                                </div>
+                                <p class="small text-white-50 mb-4">Episode #42: "The Ethics of Street Art with DASK
+                                    ONE"</p>
+                                <button class="btn btn-primary-neon w-100">LISTEN NOW</button>
+                            </div>
 
-        <!-- Graff-Cast -->
-        <section class="section-padding bg-dark">
-            <div class="container">
-                <div class="card-urban p-4 border-neon">
-                    <div class="row align-items-center">
-                        <div class="col-md-2 text-center">
-                            <i class="fas fa-microphone-alt fa-4x" style="color: var(--primary-neon);"></i>
-                        </div>
-                        <div class="col-md-7">
-                            <h3>GRAFF-CAST EPISODE #42</h3>
-                            <p class="mb-0">"The Ethics of Street Art with DASK ONE"</p>
-                        </div>
-                        <div class="col-md-3 text-center text-md-end">
-                            <button class="btn btn-primary-neon px-4"><i class="fas fa-play me-2"></i> LISTEN NOW</button>
-                        </div>
+                            <div class="sidebar-widget" style="background: var(--primary-neon); border: none;">
+                                <h5 class="text-start mb-3" style="color: #000; font-weight: 900;">JOIN THE CREW</h5>
+                                <p class="small mb-4" style="color: #000; opacity: 0.9; font-weight: 500;">Get the
+                                    latest drops and street tips delivered to your inbox every Friday.</p>
+                                <form>
+                                    <input type="email"
+                                        class="form-control bg-dark border-0 text-white mb-3 py-3 rounded-pill px-4"
+                                        placeholder="Your email">
+                                    <button class="btn btn-dark w-100 rounded-pill">SUBSCRIBE</button>
+                                </form>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
@@ -210,37 +349,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 mb-4">
-                    <div class="footer-logo">
-                        <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
-                    </div>
-                    <p class="text-muted">The ultimate hub for graffiti writers and street artists. Quality gear and urban culture.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    <div class="footer-logo"><img src="assets/images/logo.png" alt="Graffiti Store"></div>
+                    <p class="text-muted">The ultimate hub for graffiti writers and street artists.</p>
                 </div>
                 <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">SHOP</h5>
                     <a href="products.html" class="footer-link">Spray Paint</a>
                     <a href="caps.html" class="footer-link">Nozzles & Caps</a>
-                    <a href="products.html" class="footer-link">Markers</a>
-                    <a href="about.html" class="footer-link">About Us</a>
                 </div>
                 <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">EXPLORE</h5>
                     <a href="artists.html" class="footer-link">Artist Spotlight</a>
-                    <a href="gallery.html" class="footer-link">Wall Gallery</a>
                     <a href="tutorials.html" class="footer-link">Learn Styles</a>
-                    <a href="contact.html" class="footer-link">Contact</a>
                 </div>
                 <div class="col-lg-3 mb-4">
-                    <h5 class="footer-heading">NEWSLETTER</h5>
-                    <p class="small text-muted">Get the latest drops and street tips.</p>
-                    <form class="newsletter-form">
-                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
-                        <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
-                    </form>
+                    <h5 class="footer-heading">SOCIAL</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -252,4 +380,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

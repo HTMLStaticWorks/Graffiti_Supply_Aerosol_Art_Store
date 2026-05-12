@@ -141,6 +141,10 @@ p {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+.btn-push-bottom {
+    margin-top: auto !important;
+}
+
 [data-theme="light"] .btn-secondary-neon:hover {
     background-color: #000;
     color: var(--secondary-neon);
@@ -152,12 +156,40 @@ p {
 }
 
 /* Cards */
-.card-urban {
+.card-urban, 
+.testimonial-card,
+.learning-path-card {
     background-color: var(--bg-card);
     border-radius: var(--border-radius);
     border: 1px solid #333;
     transition: var(--transition-smooth);
     overflow: hidden;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100%;
+}
+
+/* Ensure content areas inside cards grow and act as flex columns */
+.card-urban > div[class*="p-"],
+.card-urban > .card-body,
+.learning-path-card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push the last primary action (button or link) to the bottom and center it */
+.card-urban .btn:last-child,
+.card-urban .btn-custom:last-child,
+.card-urban a[class*="btn"]:last-child,
+.card-urban .read-more-link:last-child,
+.learning-path-card a:last-child,
+.testimonial-author,
+.btn-push-bottom {
+    margin-top: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: fit-content;
 }
 
 .card-urban:hover {
@@ -257,6 +289,71 @@ p {
     z-index: 1;
 }
 
+.contact-hero {
+    position: relative;
+    padding: 120px 0;
+    background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('../images/mural-wall.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-bottom: 1px solid rgba(255, 49, 49, 0.3);
+}
+
+.contact-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure contact hero elements stay visible in Light Mode */
+[data-theme="light"] .contact-hero h1,
+[data-theme="light"] .contact-hero h2,
+[data-theme="light"] .contact-hero h3,
+[data-theme="light"] .contact-hero p,
+[data-theme="light"] .contact-hero li {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .contact-hero .card-urban {
+    background: rgba(10, 10, 10, 0.8) !important;
+    backdrop-filter: blur(15px);
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="light"] .contact-hero .form-label {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+[data-theme="light"] .contact-hero .form-control-urban {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="light"] .contact-hero .form-control-urban::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.contact-hero h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    color: #ffffff !important;
+    text-shadow: 0 0 30px rgba(255, 49, 49, 0.6);
+    margin-bottom: 2rem !important;
+    font-weight: 900;
+}
+
+.form-control-urban::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+    opacity: 1; /* Firefox */
+}
+
+.bg-dark-glass {
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 .hero-section .container {
     position: relative;
     z-index: 2;
@@ -293,6 +390,31 @@ p {
 .brand-logo-box:hover {
     filter: grayscale(0%);
     opacity: 1;
+}
+
+/* Form Controls Urban */
+.form-control-urban {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    padding: 12px 15px !important;
+    transition: var(--transition-smooth);
+}
+
+.form-control-urban:focus {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: var(--primary-neon) !important;
+    box-shadow: 0 0 15px rgba(255, 49, 49, 0.3) !important;
+    outline: none;
+}
+
+.contact-hero .form-label {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
 }
 
 /* Animations */
@@ -483,4 +605,105 @@ p {
 [dir="rtl"] .form-check {
     padding-left: 0;
     padding-right: 1.5em;
+}
+
+/* --- Tutorials Page Enhancements --- */
+.tutorial-video-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tutorial-video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.tutorial-video-container:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.6);
+}
+
+.tutorial-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    transition: var(--transition-smooth);
+    z-index: 2;
+}
+
+.tutorial-video-container:hover .tutorial-play-overlay {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-video-container i {
+    transition: var(--transition-smooth);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.tutorial-video-container:hover i {
+    transform: scale(1.2);
+    color: #fff !important;
+}
+
+.learning-path-card {
+    position: relative;
+    z-index: 1;
+}
+
+.learning-path-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--card-bg-image);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+    transition: var(--transition-smooth);
+}
+
+.learning-path-card:hover::before {
+    opacity: 0.2;
+}
+/* --- Blog Page Enhancements --- */
+.blog-card-img-container {
+    overflow: hidden;
+}
+
+.blog-card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.card-urban:hover .blog-card-img-container img {
+    transform: scale(1.05);
+}
+
+.blog-category-link {
+    display: block;
+    padding: 8px 0;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.blog-category-link:hover {
+    color: var(--primary-neon);
+    padding-left: 5px;
+    border-bottom-color: var(--primary-neon);
 }
