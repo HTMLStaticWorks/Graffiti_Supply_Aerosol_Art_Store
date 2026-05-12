@@ -18,42 +18,60 @@
 <body class="texture-bg">
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
-                            <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                        <div class="d-flex align-items-center ms-lg-3 gap-2">
-                            <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button><button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
-                            <a href="login.html" class="btn btn-sm btn-primary-neon">Login</a>
-                        </div>
-                    </div>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
+            </a>
+            
+            <ul class="nav-desktop">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home-2.html" class="active">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-sm btn-primary-neon header-login-btn">Login</a>
+                <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
+</header>
+
+<div class="mobile-offcanvas">
+    <div class="offcanvas-header">
+        <span class="close-menu" style="cursor:pointer; font-size: 2rem;">&times;</span>
+    </div>
+    <ul class="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html" class="active">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="auth-btn-container">
+        <a href="login.html" class="btn btn-sm btn-primary-neon w-100">Login</a>
+    </div>
+</div>
+<div class="mobile-offcanvas-overlay"></div>
+
+
 
     <main>
         <!-- Home 2 Hero: Full Split Screen -->
@@ -100,38 +118,36 @@
         <!-- Section 3: Elite Gear Showcase -->
         <section class="section-padding bg-dark">
             <div class="container">
-                <div class="row align-items-center mb-5">
-                    <div class="col-md-8">
-                        <h2 class="display-5 fw-bold">ELITE <span class="text-neon-primary">GEAR</span></h2>
-                        <p class="text-muted">Precision tools for high-stakes urban art.</p>
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <a href="products.html" class="btn btn-outline-light">VIEW ALL GEAR</a>
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <h2 class="display-5 fw-bold text-white">ELITE <span class="text-neon-primary">GEAR</span></h2>
+                        <p class="text-white-50">Precision tools for high-stakes urban art.</p>
+                        <a href="products.html" class="btn btn-primary-neon mt-3">VIEW ALL GEAR</a>
                     </div>
                 </div>
                 <div class="row g-4">
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-6 col-lg-3">
                         <div class="card-urban p-3 text-center h-100">
                             <img src="assets/images/elite-gear.png" class="img-fluid rounded mb-3" alt="Pro Cans">
                             <h4>PRO CANS</h4>
                             <p class="small text-muted">High-pressure control.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-6 col-lg-3">
                         <div class="card-urban p-3 text-center h-100">
                             <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3" alt="Chrome markers">
                             <h4>CHROME</h4>
                             <p class="small text-muted">Mirror finish ink.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-6 col-lg-3">
                         <div class="card-urban p-3 text-center h-100">
                             <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3" alt="Fat Caps">
                             <h4>FAT CAPS</h4>
                             <p class="small text-muted">Wide flare output.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-6 col-lg-3">
                         <div class="card-urban p-3 text-center h-100">
                             <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3" alt="Sketchbooks">
                             <h4>BLACKBOOKS</h4>
@@ -146,16 +162,18 @@
         <section class="section-padding bg-black overflow-hidden">
             <div class="container">
                 <div class="row align-items-center g-5">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 text-center text-lg-start">
                         <span class="badge bg-primary-neon text-dark mb-3">PRO SERIES</span>
-                        <h2 class="display-4 fw-bold mb-4">THE ARTIST'S <br><span class="text-neon-secondary">TOOLSET</span></h2>
+                        <h2 class="display-4 fw-bold mb-4 text-white">THE ARTIST'S <br><span class="text-neon-secondary">TOOLSET</span></h2>
                         <p class="lead text-light-force mb-4">Every writer knows that the tools define the technique. Our pro-series collection is curated by veterans of the scene, ensuring you have the pressure, the pigment, and the precision required for world-class murals.</p>
-                        <ul class="list-unstyled text-muted mb-5">
-                            <li class="mb-2"><i class="fas fa-check text-neon-primary me-2"></i> UV-Resistant Pigments</li>
-                            <li class="mb-2"><i class="fas fa-check text-neon-primary me-2"></i> Interchangeable Valve Systems</li>
-                            <li class="mb-2"><i class="fas fa-check text-neon-primary me-2"></i> Ergonomic Can Design</li>
-                        </ul>
-                        <a href="about.html" class="btn-custom btn-primary-neon">EXPLORE THE TECH</a>
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <ul class="list-unstyled text-white-50 mb-5 text-start">
+                                <li class="mb-2"><i class="fas fa-check text-neon-primary me-2"></i> UV-Resistant Pigments</li>
+                                <li class="mb-2"><i class="fas fa-check text-neon-primary me-2"></i> Interchangeable Valve Systems</li>
+                                <li class="mb-2"><i class="fas fa-check text-neon-primary me-2"></i> Ergonomic Can Design</li>
+                            </ul>
+                        </div>
+                        <a href="about.html" class="btn-custom btn-primary-neon mx-auto d-table mx-lg-0 d-lg-inline-flex">EXPLORE THE TECH</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="position-relative">
@@ -189,7 +207,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <a href="gallery.html" class="btn btn-sm btn-outline-light">VIEW MORE ON INSTAGRAM</a>
+                    <a href="gallery.html" class="btn btn-sm btn-secondary-neon">VIEW MORE ON INSTAGRAM</a>
                 </div>
             </div>
         </section>
@@ -242,8 +260,8 @@
         <section class="section-padding bg-black">
             <div class="container">
                 <div class="card-urban p-5 text-center" style="background: linear-gradient(45deg, rgba(57, 255, 20, 0.1), rgba(0, 0, 0, 0.9)); border: 1px solid var(--primary-neon);">
-                    <h2 class="display-4 fw-bold mb-3">JOIN THE <span class="text-neon-primary">UNDERGROUND</span></h2>
-                    <p class="lead mb-4">Get early access to drops, exclusive artist interviews, and 10% off your first order.</p>
+                    <h2 class="display-4 fw-bold mb-3 text-white">JOIN THE <span class="text-neon-primary">UNDERGROUND</span></h2>
+                    <p class="lead mb-4 text-white-50">Get early access to drops, exclusive artist interviews, and 10% off your first order.</p>
                     <div class="row justify-content-center">
                         <div class="col-md-6">
                             <form class="d-flex gap-2">
@@ -252,7 +270,7 @@
                             </form>
                         </div>
                     </div>
-                    <p class="small text-muted mt-4">We respect your privacy. No spam, just pure street culture.</p>
+                    <p class="small text-white-50 mt-4">We respect your privacy. No spam, just pure street culture.</p>
                 </div>
             </div>
         </section>
@@ -273,21 +291,18 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-6 mb-4">
+                <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">SHOP</h5>
                     <a href="products.html" class="footer-link">Spray Paint</a>
                     <a href="caps.html" class="footer-link">Nozzles & Caps</a>
                     <a href="products.html" class="footer-link">Markers</a>
+                    <a href="about.html" class="footer-link">About Us</a>
                 </div>
-                <div class="col-lg-2 col-6 mb-4">
+                <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">EXPLORE</h5>
                     <a href="artists.html" class="footer-link">Artist Spotlight</a>
                     <a href="gallery.html" class="footer-link">Wall Gallery</a>
                     <a href="tutorials.html" class="footer-link">Learn Styles</a>
-                </div>
-                <div class="col-lg-2 col-6 mb-4">
-                    <h5 class="footer-heading">SUPPORT</h5>
-                    <a href="about.html" class="footer-link">About Us</a>
                     <a href="contact.html" class="footer-link">Contact</a>
                 </div>
                 <div class="col-lg-3 mb-4">
@@ -309,3 +324,8 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

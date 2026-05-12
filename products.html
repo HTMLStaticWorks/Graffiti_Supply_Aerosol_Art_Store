@@ -32,42 +32,60 @@
 <body class="texture-bg">
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
-                            <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                        <div class="d-flex align-items-center ms-lg-3 gap-2">
-                            <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button><button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
-                            <a href="login.html" class="btn btn-sm btn-primary-neon">Login</a>
-                        </div>
-                    </div>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
+            </a>
+            
+            <ul class="nav-desktop">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html" class="active">Shop</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-sm btn-primary-neon header-login-btn">Login</a>
+                <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
+</header>
+
+<div class="mobile-offcanvas">
+    <div class="offcanvas-header">
+        <span class="close-menu" style="cursor:pointer; font-size: 2rem;">&times;</span>
+    </div>
+    <ul class="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html" class="active">Shop</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="auth-btn-container">
+        <a href="login.html" class="btn btn-sm btn-primary-neon w-100">Login</a>
+    </div>
+</div>
+<div class="mobile-offcanvas-overlay"></div>
+
+
 
     <main>
         <section class="section-padding">
@@ -84,7 +102,7 @@
 
                 <div class="row g-4">
                     <!-- Product 1 -->
-                    <div class="col-6 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-4">
                         <div class="card-urban p-3">
                             <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Paint 1">
                             <h4 class="text-start">ULTRA CHROME</h4>
@@ -101,13 +119,13 @@
                         </div>
                     </div>
                     <!-- Product 2 -->
-                    <div class="col-6 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-4">
                         <div class="card-urban p-3">
                             <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Paint 2">
                             <h4 class="text-start">NEON BLAST</h4>
                             <p class="small text-muted">Low Pressure / 400ml</p>
                             <div class="d-flex gap-2 mb-3">
-                                <span class="paint-swatch" style="background-color: #FAFF00;" title="Neon Yellow"></span>
+                                <span class="paint-swatch" style="background-color: #FF3131;" title="Bright Red"></span>
                                 <span class="paint-swatch" style="background-color: #FF003C;" title="Neon Red"></span>
                                 <span class="paint-swatch" style="background-color: #39FF14;" title="Neon Green"></span>
                             </div>
@@ -118,7 +136,7 @@
                         </div>
                     </div>
                     <!-- More products... -->
-                    <div class="col-6 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-4">
                         <div class="card-urban p-3">
                             <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Paint 3">
                             <h4 class="text-start">MATTE MASTER</h4>
@@ -134,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-4">
                         <div class="card-urban p-3">
                             <img src="https://images.unsplash.com/photo-1501472312651-726afe119ff1?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Paint 4">
                             <h4 class="text-start">TRANS-LUX</h4>
@@ -151,7 +169,7 @@
                         </div>
                     </div>
                     <!-- Product 5 -->
-                    <div class="col-6 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-4">
                         <div class="card-urban p-3 h-100">
                             <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Product 5">
                             <h4 class="text-start">PRO MOP MARKER</h4>
@@ -163,7 +181,7 @@
                         </div>
                     </div>
                     <!-- Product 6 -->
-                    <div class="col-6 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-4">
                         <div class="card-urban p-3 h-100">
                             <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Product 6">
                             <h4 class="text-start">FAT CAP BUNDLE</h4>
@@ -175,7 +193,7 @@
                         </div>
                     </div>
                     <!-- Product 7 -->
-                    <div class="col-6 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-4">
                         <div class="card-urban p-3 h-100">
                             <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Product 7">
                             <h4 class="text-start">URBAN SKETCHBOOK</h4>
@@ -187,7 +205,7 @@
                         </div>
                     </div>
                     <!-- Product 8 -->
-                    <div class="col-6 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-4">
                         <div class="card-urban p-3 h-100">
                             <img src="https://images.unsplash.com/photo-1501472312651-726afe119ff1?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Product 8">
                             <h4 class="text-start">VENTED RESPIRATOR</h4>
@@ -199,25 +217,13 @@
                         </div>
                     </div>
                     <!-- Product 9 -->
-                    <div class="col-6 col-lg-3">
+                    <div class="col-12 col-md-4 col-lg-4">
                         <div class="card-urban p-3 h-100">
                             <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Product 9">
                             <h4 class="text-start">NY FAT CAPS</h4>
                             <p class="small text-muted">50 Pack / Classic Blue</p>
                             <div class="d-flex justify-content-between align-items-center mt-auto">
                                 <span class="fw-bold">$18.99</span>
-                                <button class="btn btn-sm btn-primary-neon">ADD</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 10 -->
-                    <div class="col-6 col-lg-3">
-                        <div class="card-urban p-3 h-100">
-                            <img src="https://images.unsplash.com/photo-1525904097878-94fb15835963?auto=format&fit=crop&q=80&w=400" class="img-fluid rounded mb-3 img-height-sm" alt="Product 10">
-                            <h4 class="text-start">STEEL MESH BAG</h4>
-                            <p class="small text-muted">12 Can Capacity / Stealth</p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <span class="fw-bold">$38.50</span>
                                 <button class="btn btn-sm btn-primary-neon">ADD</button>
                             </div>
                         </div>
@@ -292,21 +298,18 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-6 mb-4">
+                <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">SHOP</h5>
                     <a href="products.html" class="footer-link">Spray Paint</a>
                     <a href="caps.html" class="footer-link">Nozzles & Caps</a>
                     <a href="products.html" class="footer-link">Markers</a>
+                    <a href="about.html" class="footer-link">About Us</a>
                 </div>
-                <div class="col-lg-2 col-6 mb-4">
+                <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">EXPLORE</h5>
                     <a href="artists.html" class="footer-link">Artist Spotlight</a>
                     <a href="gallery.html" class="footer-link">Wall Gallery</a>
                     <a href="tutorials.html" class="footer-link">Learn Styles</a>
-                </div>
-                <div class="col-lg-2 col-6 mb-4">
-                    <h5 class="footer-heading">SUPPORT</h5>
-                    <a href="about.html" class="footer-link">About Us</a>
                     <a href="contact.html" class="footer-link">Contact</a>
                 </div>
                 <div class="col-lg-3 mb-4">
@@ -328,3 +331,8 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

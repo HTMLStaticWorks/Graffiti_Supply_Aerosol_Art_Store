@@ -1,6 +1,6 @@
 /* --- Global Design System --- */
 :root {
-    --primary-neon: #FAFF00; /* Neon Yellow */
+    --primary-neon: #FF3131; /* Neon Red */
     --secondary-neon: #FF003C; /* Neon Red */
     --bg-dark: #0A0A0A;
     --bg-card: #151515;
@@ -17,7 +17,11 @@ body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
     margin: 0;
-    padding: 0;
+padding: 0;
+}
+
+main {
+    padding-top: 70px;
 }
 
 /* Typography */
@@ -26,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.5px;
+    color: var(--text-main);
 }
 
 p {
@@ -54,7 +59,7 @@ p {
     color: var(--secondary-neon) !important;
 }
 
-.text-light-force {
+.text-light-force, .bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark p, .bg-dark li, .bg-dark .lead, .hero-section h1, .hero-section p, .hero-section .lead {
     color: #f8f9fa !important;
 }
 
@@ -72,6 +77,15 @@ p {
     cursor: pointer;
     text-decoration: none;
     height: 50px; /* Consistent height */
+}
+
+.brand-item {
+    font-weight: 900;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    text-transform: uppercase;
+    color: var(--text-main);
 }
 
 .btn-primary-neon {
@@ -99,9 +113,9 @@ p {
 }
 
 .btn-outline {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.05);
     color: var(--text-white);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: #FFFFFF;
 }
 
 .btn-outline:hover {
@@ -122,8 +136,9 @@ p {
 }
 
 [data-theme="light"] .btn-outline {
-    color: var(--bg-dark);
-    border-color: rgba(0, 0, 0, 0.2);
+    color: #1A1A1A;
+    border-color: #1A1A1A;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 [data-theme="light"] .btn-secondary-neon:hover {
@@ -148,7 +163,49 @@ p {
 .card-urban:hover {
     transform: translateY(-10px);
     border-color: var(--primary-neon);
-    box-shadow: 0 10px 30px rgba(250, 255, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(255, 49, 49, 0.1);
+}
+
+.card-urban h1, .card-urban h2, .card-urban h3, .card-urban h4, .card-urban h5, .card-urban h6, .card-urban p, .card-urban .lead {
+    color: var(--text-main) !important;
+}
+
+.card-urban .text-white {
+    color: #FFFFFF !important;
+}
+
+.card-urban .text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.card-urban .text-success {
+    color: #198754 !important;
+}
+
+.card-urban .text-danger {
+    color: #dc3545 !important;
+}
+
+.card-urban .text-dark {
+    color: #212529 !important;
+}
+
+/* Accordion Visibility Fixes */
+.accordion-button {
+    color: var(--text-main) !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(255, 49, 49, 0.1) !important;
+    color: var(--primary-neon) !important;
+}
+
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+[data-theme="light"] .accordion-button::after {
+    filter: none;
 }
 
 /* Texture Overlays */
@@ -167,7 +224,7 @@ p {
 
 .border-neon {
     border: 1px solid var(--primary-neon) !important;
-    box-shadow: 0 0 15px rgba(250, 255, 0, 0.2);
+    box-shadow: 0 0 15px rgba(255, 49, 49, 0.2);
 }
 
 .bg-primary-neon {
@@ -277,5 +334,153 @@ p {
 
 #back-to-top:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(250, 255, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 49, 49, 0.4);
+}
+/* --- Auth Page Enhancements --- */
+.auth-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.auth-controls .btn-outline {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    transition: var(--transition-smooth);
+}
+
+.auth-controls .btn-outline:hover {
+    background: var(--primary-neon);
+    color: #000 !important;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--primary-neon);
+}
+
+[data-theme="light"] .auth-controls .btn-outline {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000 !important;
+    border-color: #000 !important;
+}
+
+[data-theme="light"] .auth-controls .btn-outline:hover {
+    background: #000;
+    color: var(--primary-neon) !important;
+    border-color: #000 !important;
+}
+
+[data-theme="light"] .auth-controls .btn-outline:hover i {
+    color: var(--primary-neon) !important;
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: var(--transition-smooth);
+    z-index: 10;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.password-toggle:hover {
+    color: var(--primary-neon);
+}
+
+.social-login-container {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .social-login-container {
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-social {
+    width: 100%;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    transition: var(--transition-smooth);
+}
+
+.btn-social:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-neon);
+    color: var(--primary-neon);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 49, 49, 0.2);
+}
+
+[data-theme="light"] .btn-social {
+    background-color: #ffffff;
+    border-color: #cccccc;
+    color: #1A1A1A;
+}
+
+[data-theme="light"] .btn-social:hover {
+    background-color: #f0f0f0;
+    border-color: var(--secondary-neon);
+    color: var(--secondary-neon);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password {
+    color: var(--secondary-neon);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition-smooth);
+}
+
+.forgot-password:hover, .auth-link:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 1px #fff, 0 0 8px currentColor; /* Sharp core + soft outer glow */
+    filter: brightness(1.2);
+}
+
+.auth-link {
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+    display: inline-block; /* Helps with some transitions */
+}
+
+/* RTL Adjustments for Auth Controls */
+[dir="rtl"] .auth-controls {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] .password-toggle {
+    right: auto;
+    left: 15px;
+}
+
+[dir="rtl"] .form-check-input {
+    float: right;
+    margin-left: 0.5em;
+    margin-right: -1.5em;
+}
+
+[dir="rtl"] .form-check {
+    padding-left: 0;
+    padding-right: 1.5em;
 }

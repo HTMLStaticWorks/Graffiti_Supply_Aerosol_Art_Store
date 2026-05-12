@@ -17,51 +17,69 @@
 <body class="texture-bg">
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
-                            <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                        <div class="d-flex align-items-center ms-lg-3 gap-2">
-                            <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button><button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
-                            <a href="login.html" class="btn btn-sm btn-primary-neon">Login</a>
-                        </div>
-                    </div>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
+            </a>
+            
+            <ul class="nav-desktop">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-sm btn-primary-neon header-login-btn">Login</a>
+                <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
+</header>
+
+<div class="mobile-offcanvas">
+    <div class="offcanvas-header">
+        <span class="close-menu" style="cursor:pointer; font-size: 2rem;">&times;</span>
+    </div>
+    <ul class="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="auth-btn-container">
+        <a href="login.html" class="btn btn-sm btn-primary-neon w-100">Login</a>
+    </div>
+</div>
+<div class="mobile-offcanvas-overlay"></div>
+
+
 
     <main class="d-flex align-items-center justify-content-center" style="min-height: 80vh;">
         <div class="container text-center">
             <h1 class="display-1 fw-black mb-0" style="font-size: 10rem; color: var(--secondary-neon);">404</h1>
             <h2 class="mb-4">WALL NOT FOUND</h2>
             <p class="text-muted mb-5">Looks like this spot has been buffed or never existed.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="index.html" class="btn-custom btn-primary-neon">BACK TO BASE</a>
-                <a href="gallery.html" class="btn-custom btn-outline">GO TO GALLERY</a>
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3 px-3">
+                <a href="index.html" class="btn-custom btn-primary-neon w-100 w-md-auto">BACK TO BASE</a>
+                <a href="gallery.html" class="btn-custom btn-secondary-neon w-100 w-md-auto">GO TO GALLERY</a>
             </div>
         </div>
     </main>
@@ -70,3 +88,8 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

@@ -3,14 +3,19 @@
     --bg-dark: #0A0A0A;
     --bg-card: #151515;
     --text-main: #FFFFFF;
-    --text-muted: #A0A0A0;
+    --text-muted: #CCCCCC; /* Lighter muted text for better readability */
 }
 
 [data-theme="light"] {
-    --bg-dark: #F5F5F5;
-    --bg-card: #FFFFFF;
+    --bg-dark: #FFFFFF; /* Pure white for light mode */
+    --bg-card: #F8F9FA;
     --text-main: #1A1A1A;
-    --text-muted: #666666;
+    --text-muted: #555555;
+}
+
+[data-theme="light"] .texture-bg {
+    background-image: none; /* Remove dark texture in light mode for clarity */
+    background-color: #FFFFFF;
 }
 
 /* Light mode overrides for urban look */

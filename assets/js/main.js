@@ -1,9 +1,9 @@
 /* --- Main JavaScript --- */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Dark Mode Toggle
+    // 1. Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'dark';
+    const currentTheme = localStorage.getItem('theme') || 'light';
     
     document.documentElement.setAttribute('data-theme', currentTheme);
     
@@ -13,7 +13,22 @@ document.addEventListener('DOMContentLoaded', () => {
             let newTheme = theme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
+            updateThemeIcon(themeToggle, newTheme);
         });
+        updateThemeIcon(themeToggle, currentTheme);
+    }
+
+    function updateThemeIcon(btn, theme) {
+        const icon = btn.querySelector('i');
+        if (icon) {
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
     }
 
     // 2. RTL Toggle (Simulated or via UI)
@@ -97,5 +112,45 @@ document.addEventListener('DOMContentLoaded', () => {
             top: 0,
             behavior: 'smooth'
         });
+    });
+    // 7. Password Visibility Toggle
+    const passwordToggles = document.querySelectorAll('.password-toggle');
+    passwordToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const input = toggle.parentElement.querySelector('input');
+            const icon = toggle.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    });
+
+    // 8. Custom Hamburger Menu (Guide Implementation)
+    const hamburger = document.querySelector('.hamburger');
+    const offcanvas = document.querySelector('.mobile-offcanvas');
+    const closeMenu = document.querySelector('.close-menu');
+    const overlay = document.querySelector('.mobile-offcanvas-overlay');
+
+    const toggleMenu = (show) => {
+        if (offcanvas) offcanvas.classList.toggle('active', show);
+        if (overlay) overlay.classList.toggle('active', show);
+        document.body.style.overflow = show ? 'hidden' : ''; // Prevent scrolling
+    };
+
+    if (hamburger) hamburger.addEventListener('click', () => toggleMenu(true));
+    if (closeMenu) closeMenu.addEventListener('click', () => toggleMenu(false));
+    if (overlay) overlay.addEventListener('click', () => toggleMenu(false));
+    
+    // Close menu when a link is clicked
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => toggleMenu(false));
     });
 });

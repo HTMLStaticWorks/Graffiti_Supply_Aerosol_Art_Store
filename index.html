@@ -31,43 +31,60 @@
 
     <!-- Header / Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
-                            <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                        <div class="d-flex align-items-center ms-lg-3 gap-2">
-                            <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
-                            <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
-                            <a href="login.html" class="btn btn-sm btn-primary-neon">Login</a>
-                        </div>
-                    </div>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
+            </a>
+            
+            <ul class="nav-desktop">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-sm btn-primary-neon header-login-btn">Login</a>
+                <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
+</header>
+
+<div class="mobile-offcanvas">
+    <div class="offcanvas-header">
+        <span class="close-menu" style="cursor:pointer; font-size: 2rem;">&times;</span>
+    </div>
+    <ul class="mobile-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="auth-btn-container">
+        <a href="login.html" class="btn btn-sm btn-primary-neon w-100">Login</a>
+    </div>
+</div>
+<div class="mobile-offcanvas-overlay"></div>
+
+
 
     <main>
         <!-- Hero Section -->
@@ -75,9 +92,9 @@
             <div class="container text-center">
                 <h1 class="display-1 mb-4 animate-fade" style="color: var(--primary-neon);">Spray The World</h1>
                 <p class="lead mb-5 animate-fade text-white-force" style="max-width: 700px; margin: 0 auto;">Premium aerosol art supplies for the street's finest. Shop the largest collection of professional spray paints and specialized caps.</p>
-                <div class="d-flex justify-content-center gap-3 animate-fade">
-                    <a href="products.html" class="btn-custom btn-primary-neon">Shop Paint</a>
-                    <a href="gallery.html" class="btn-custom btn-outline">View Gallery</a>
+                <div class="d-flex flex-column flex-md-row justify-content-center gap-3 animate-fade px-3">
+                    <a href="products.html" class="btn-custom btn-primary-neon w-100 w-md-auto">Shop Paint</a>
+                    <a href="gallery.html" class="btn-custom btn-secondary-neon w-100 w-md-auto">View Gallery</a>
                 </div>
             </div>
         </section>
@@ -92,7 +109,7 @@
                             <div class="icon-box mb-3"><i class="fas fa-spray-can fa-3x color-primary" style="color: var(--primary-neon);"></i></div>
                             <h3>Premium Paint</h3>
                             <p class="text-muted">High-pressure, matte finish, ultimate control.</p>
-                            <a href="products.html" class="btn-custom btn-outline w-100 mt-3">Browse Colors</a>
+                            <a href="products.html" class="btn-custom btn-primary-neon w-100 mt-3">Browse Colors</a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -100,7 +117,7 @@
                             <div class="icon-box mb-3"><i class="fas fa-fill-drip fa-3x color-secondary" style="color: var(--secondary-neon);"></i></div>
                             <h3>Specialty Caps</h3>
                             <p class="text-muted">From ultra-skinny to fat-cap flares.</p>
-                            <a href="caps.html" class="btn-custom btn-outline w-100 mt-3">Select Tips</a>
+                            <a href="caps.html" class="btn-custom btn-primary-neon w-100 mt-3">Select Tips</a>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -108,7 +125,7 @@
                             <div class="icon-box mb-3"><i class="fas fa-marker fa-3x" style="color: #fff;"></i></div>
                             <h3>Artist Markers</h3>
                             <p class="text-muted">Ink that stays, markers that last.</p>
-                            <a href="products.html" class="btn-custom btn-outline w-100 mt-3">Shop Markers</a>
+                            <a href="products.html" class="btn-custom btn-primary-neon w-100 mt-3">Shop Markers</a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +183,7 @@
                             <div class="p-3">
                                 <h4 class="text-start">Letter Flow</h4>
                                 <p class="small text-muted">Mastering connections and balance.</p>
-                                <a href="tutorials.html" class="btn btn-sm btn-outline mt-2">Watch Now</a>
+                                <a href="tutorials.html" class="btn btn-sm btn-secondary-neon mt-2">Watch Now</a>
                             </div>
                         </div>
                     </div>
@@ -178,7 +195,7 @@
                             <div class="p-3">
                                 <h4 class="text-start">3D Effects</h4>
                                 <p class="small text-muted">Creating depth and shadow on flat walls.</p>
-                                <a href="tutorials.html" class="btn btn-sm btn-outline mt-2">Watch Now</a>
+                                <a href="tutorials.html" class="btn btn-sm btn-secondary-neon mt-2">Watch Now</a>
                             </div>
                         </div>
                     </div>
@@ -190,7 +207,7 @@
                             <div class="p-3">
                                 <h4 class="text-start">Can Control</h4>
                                 <p class="small text-muted">Precision lines and smooth fades.</p>
-                                <a href="tutorials.html" class="btn btn-sm btn-outline mt-2">Watch Now</a>
+                                <a href="tutorials.html" class="btn btn-sm btn-secondary-neon mt-2">Watch Now</a>
                             </div>
                         </div>
                     </div>
@@ -274,21 +291,18 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-6 mb-4">
+                <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">SHOP</h5>
                     <a href="products.html" class="footer-link">Spray Paint</a>
                     <a href="caps.html" class="footer-link">Nozzles & Caps</a>
                     <a href="products.html" class="footer-link">Markers</a>
+                    <a href="about.html" class="footer-link">About Us</a>
                 </div>
-                <div class="col-lg-2 col-6 mb-4">
+                <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">EXPLORE</h5>
                     <a href="artists.html" class="footer-link">Artist Spotlight</a>
                     <a href="gallery.html" class="footer-link">Wall Gallery</a>
                     <a href="tutorials.html" class="footer-link">Learn Styles</a>
-                </div>
-                <div class="col-lg-2 col-6 mb-4">
-                    <h5 class="footer-heading">SUPPORT</h5>
-                    <a href="about.html" class="footer-link">About Us</a>
                     <a href="contact.html" class="footer-link">Contact</a>
                 </div>
                 <div class="col-lg-3 mb-4">
@@ -312,3 +326,8 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

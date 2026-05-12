@@ -17,49 +17,67 @@
 <body class="texture-bg">
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="products.html">Shop</a></li>
-                            <li class="nav-item"><a class="nav-link" href="artists.html">Artists</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item"><a class="nav-link" href="tutorials.html">Tutorials</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                        <div class="d-flex align-items-center ms-lg-3 gap-2">
-                            <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button><button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
-                            <a href="login.html" class="btn btn-sm btn-primary-neon">Login</a>
-                        </div>
-                    </div>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="Graffiti Supply Store">
+            </a>
+            
+            <ul class="nav-desktop">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home-2.html">Home 2</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tutorials.html" class="active">Tutorials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-sm btn-primary-neon header-login-btn">Login</a>
+                <button class="btn btn-sm btn-outline" id="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                <button class="btn btn-sm btn-outline" id="rtl-toggle" title="Toggle RTL">RTL</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
+</header>
+
+<div class="mobile-offcanvas">
+    <div class="offcanvas-header">
+        <span class="close-menu" style="cursor:pointer; font-size: 2rem;">&times;</span>
+    </div>
+    <ul class="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="home-2.html">Home 2</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="artists.html">Artists</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tutorials.html" class="active">Tutorials</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="auth-btn-container">
+        <a href="login.html" class="btn btn-sm btn-primary-neon w-100">Login</a>
+    </div>
+</div>
+<div class="mobile-offcanvas-overlay"></div>
+
+
 
     <main>
         <section class="section-padding bg-dark">
             <div class="container">
                 <h1 class="mb-5">GRAFFITI TUTORIALS</h1>
                 
-                <div class="row g-4">
+                <div class="row g-4 justify-content-center">
                     <!-- Video 1 -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card-urban overflow-hidden">
@@ -119,7 +137,7 @@
                             <span class="h1 d-block mb-3" style="color: var(--primary-neon);">01</span>
                             <h4>THE BASICS</h4>
                             <p class="small">Mastering the blackbook, letter forms, and simple 2D shapes. 5 Tutorials included.</p>
-                            <a href="#" class="btn btn-sm btn-outline mt-3 w-100">START PATH</a>
+                            <a href="#" class="btn btn-sm btn-primary-neon mt-3 w-100">START PATH</a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -127,7 +145,7 @@
                             <span class="h1 d-block mb-3" style="color: var(--secondary-neon);">02</span>
                             <h4>CAN CONTROL</h4>
                             <p class="small">Understanding pressure, caps, and distance. Moving from paper to concrete. 8 Tutorials included.</p>
-                            <a href="#" class="btn btn-sm btn-outline mt-3 w-100">START PATH</a>
+                            <a href="#" class="btn btn-sm btn-primary-neon mt-3 w-100">START PATH</a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -135,7 +153,7 @@
                             <span class="h1 d-block mb-3" style="color: var(--primary-neon);">03</span>
                             <h4>PRO MASTERY</h4>
                             <p class="small">Advanced wildstyles, 3D effects, and large scale production. 12 Tutorials included.</p>
-                            <a href="#" class="btn btn-sm btn-outline mt-3 w-100">START PATH</a>
+                            <a href="#" class="btn btn-sm btn-primary-neon mt-3 w-100">START PATH</a>
                         </div>
                     </div>
                 </div>
@@ -146,26 +164,30 @@
         <section class="section-padding">
             <div class="container">
                 <div class="row align-items-center g-5">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 text-center">
                         <h2>THE ESSENTIAL TOOLKIT</h2>
                         <p class="mb-4">Before you start your first tutorial, make sure you have the basics ready. Use our interactive checklist to see what's missing.</p>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="tool1">
-                            <label class="form-check-label" for="tool1">Blackbook (120gsm+ Paper)</label>
+                        <div class="d-inline-block text-start mb-4">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tool1">
+                                <label class="form-check-label" for="tool1">Blackbook (120gsm+ Paper)</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tool2">
+                                <label class="form-check-label" for="tool2">Chisel Tip Paint Markers</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tool3">
+                                <label class="form-check-label" for="tool3">Set of Low Pressure Cans</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tool4">
+                                <label class="form-check-label" for="tool4">Variety Pack of Caps (Fat to Skinny)</label>
+                            </div>
                         </div>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="tool2">
-                            <label class="form-check-label" for="tool2">Chisel Tip Paint Markers</label>
+                        <div class="d-block">
+                            <a href="products.html" class="btn btn-primary-neon">SHOP THE STARTER PACK</a>
                         </div>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="tool3">
-                            <label class="form-check-label" for="tool3">Set of Low Pressure Cans</label>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="tool4">
-                            <label class="form-check-label" for="tool4">Variety Pack of Caps (Fat to Skinny)</label>
-                        </div>
-                        <a href="products.html" class="btn btn-primary-neon mt-3">SHOP THE STARTER PACK</a>
                     </div>
                     <div class="col-lg-6">
                         <img src="https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded border-neon shadow-lg" alt="Graffiti Tools">
@@ -229,21 +251,18 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-6 mb-4">
+                <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">SHOP</h5>
                     <a href="products.html" class="footer-link">Spray Paint</a>
                     <a href="caps.html" class="footer-link">Nozzles & Caps</a>
                     <a href="products.html" class="footer-link">Markers</a>
+                    <a href="about.html" class="footer-link">About Us</a>
                 </div>
-                <div class="col-lg-2 col-6 mb-4">
+                <div class="col-lg-3 col-6 mb-4">
                     <h5 class="footer-heading">EXPLORE</h5>
                     <a href="artists.html" class="footer-link">Artist Spotlight</a>
                     <a href="gallery.html" class="footer-link">Wall Gallery</a>
                     <a href="tutorials.html" class="footer-link">Learn Styles</a>
-                </div>
-                <div class="col-lg-2 col-6 mb-4">
-                    <h5 class="footer-heading">SUPPORT</h5>
-                    <a href="about.html" class="footer-link">About Us</a>
                     <a href="contact.html" class="footer-link">Contact</a>
                 </div>
                 <div class="col-lg-3 mb-4">
@@ -265,3 +284,8 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+

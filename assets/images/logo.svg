@@ -1,12 +1,12 @@
 <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
   <!-- Premium Pill Logo -->
   <rect width="200" height="50" y="5" rx="25" fill="#000000" />
-  <rect width="200" height="50" y="5" rx="25" fill="none" stroke="#FAFF00" stroke-width="1" opacity="0.3" />
+  <rect width="200" height="50" y="5" rx="25" fill="none" stroke="#FF3131" stroke-width="1" opacity="0.3" />
   
   <!-- Refined Spray Can Icon -->
   <g transform="translate(25, 12)">
     <!-- Can Body -->
-    <rect x="0" y="8" width="16" height="24" rx="2" fill="#FAFF00" />
+    <rect x="0" y="8" width="16" height="24" rx="2" fill="#FF3131" />
     <!-- Label/Stripe -->
     <rect x="0" y="16" width="16" height="4" fill="#FF003C" />
     <!-- Cap -->
@@ -14,15 +14,15 @@
     <circle cx="8" cy="1" r="1.5" fill="#FF003C" />
     <!-- Spray Mist -->
     <g opacity="0.8">
-        <circle cx="22" cy="10" r="1.5" fill="#FAFF00" />
+        <circle cx="22" cy="10" r="1.5" fill="#FF3131" />
         <circle cx="28" cy="5" r="2" fill="#FF003C" />
-        <circle cx="28" cy="15" r="2" fill="#FAFF00" />
+        <circle cx="28" cy="15" r="2" fill="#FF3131" />
         <circle cx="34" cy="10" r="1.5" fill="#FF003C" />
     </g>
   </g>
   
   <!-- "GRAFF" Text -->
-  <text x="75" y="38" font-family="'Inter', sans-serif" font-weight="900" font-size="26" fill="#FAFF00" style="letter-spacing: 3px; text-shadow: 0 0 10px rgba(250, 255, 0, 0.3);">
+  <text x="75" y="38" font-family="'Inter', sans-serif" font-weight="900" font-size="26" fill="#FF3131" style="letter-spacing: 3px; text-shadow: 0 0 10px rgba(255, 49, 49, 0.3);">
     GRAFF
   </text>
 </svg>
